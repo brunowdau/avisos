@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Radar Lean — Edições</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#345574;--gray:#696969;--light:#E9E9E9;--white:#fff;--title:'Barlow Condensed','Arial Narrow',Arial,sans-serif;--body:'Inter',Arial,sans-serif}
+    *{box-sizing:border-box}
+    body{margin:0;background:#f6f6f6;color:#222;font-family:var(--body)}
+    .top{background:var(--blue);padding:24px 28px;color:#fff}
+    .top strong{font-family:var(--title);font-size:28px;font-weight:600}
+    main{width:min(980px,calc(100% - 36px));margin:52px auto 80px}
+    .eyebrow{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--blue)}
+    h1{font-family:var(--title);font-size:clamp(42px,6vw,62px);font-weight:600;line-height:1.03;margin:8px 0 10px}
+    .lead{font-size:15px;line-height:1.62;color:var(--gray);max-width:62ch;margin:0 0 34px}
+    .editions{border-top:3px solid var(--blue);background:#fff}
+    .edition{display:grid;grid-template-columns:120px 1fr auto;gap:24px;align-items:center;padding:22px 24px;border-bottom:1px solid #ddd;text-decoration:none;color:inherit}
+    .edition:hover{background:#fafafa}
+    .date{font-family:Georgia,serif;font-size:22px;color:var(--blue)}
+    .edition h2{font-family:var(--title);font-size:28px;font-weight:600;margin:0 0 4px}
+    .edition p{margin:0;color:var(--gray);font-size:12px}
+    .open{font-size:11px;font-weight:600;color:var(--blue)}
+    footer{margin-top:20px;color:#888;font-size:10px}
+    @media(max-width:620px){.edition{grid-template-columns:1fr;gap:7px}.open{margin-top:4px}}
+  </style>
+</head>
+<body>
+  <div class="top"><strong>Radar Lean</strong></div>
+  <main>
+    <div class="eyebrow">Arquivo de publicações</div>
+    <h1>Edições do Radar Lean</h1>
+    <p class="lead">Acesse abaixo as publicações anteriores. Cada edição permanece arquivada em uma pasta própria para preservar o histórico.</p>
+    <section class="editions">
+      <a class="edition" href="./ago-2026/">
+        <div class="date">08 / 2026</div>
+        <div>
+          <h2>Agosto de 2026</h2>
+          <p>Edição especial — resumo dos últimos meses.</p>
+        </div>
+        <div class="open">Abrir edição →</div>
+      </a>
+    </section>
+    <footer>Lean Company · uso interno</footer>
+  </main>
+</body>
+</html>
