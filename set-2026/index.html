@@ -1,233 +1,197 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Informativo Lean Â· Setembro de 2026</title><style>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Informativo Lean · Setembro de 2026</title>
+<style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-:root{
-  --blue:#345574;--navy:#22394d;--ink:#20272c;--muted:#667179;--line:#dce2e5;
-  --bg:#f5f6f7;--paper:#fff;--soft:#edf1f3;--warm:#f2ece2;
-  --rail:54px;--rail-open:226px;--top:52px;--max:1220px;
-}
+:root{--blue:#345574;--navy:#22394d;--ink:#20272c;--muted:#667179;--line:#dce2e5;--bg:#f5f6f7;--paper:#fff;--soft:#edf1f3;--warm:#f2ece2;--rail:56px;--railOpen:228px;--top:52px;--max:1220px}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Arial,Helvetica,sans-serif;font-size:15px;line-height:1.62;overflow-x:hidden}
-a{color:inherit}button,input,textarea,select,summary{font:inherit}
-button,summary{cursor:pointer}
-h1,h2,h3{margin:0;letter-spacing:-.02em}
-h1{font-size:clamp(39px,4vw,50px);line-height:1.07;font-weight:720}
-h2{font-size:clamp(27px,2.4vw,33px);line-height:1.14;font-weight:680}
-h3{font-size:19px;line-height:1.32;font-weight:670}
-p{margin:0}
-.hidden{display:none!important}
-section[id],article[id],div[id]{scroll-margin-top:70px}
+a{color:inherit}button,input,textarea,select,summary{font:inherit}button,summary{cursor:pointer}
+h1,h2,h3{margin:0;letter-spacing:-.02em}h1{font-size:clamp(39px,4vw,50px);line-height:1.07;font-weight:720}h2{font-size:clamp(27px,2.4vw,33px);line-height:1.14;font-weight:680}h3{font-size:19px;line-height:1.32;font-weight:670}p{margin:0}
+.hidden{display:none!important}section[id]{scroll-margin-top:70px}
 .kicker{font-size:10px;letter-spacing:.105em;text-transform:uppercase;font-weight:750;color:var(--blue)}
-.small{font-size:12px;color:var(--muted)}
-.rule{border-top:1px solid var(--line)}
-/* Login */
-.login{min-height:100vh;display:grid;place-items:center;background:var(--blue);padding:24px}
-.loginCard{width:min(500px,100%);background:#fff;border-radius:12px;padding:36px;box-shadow:0 24px 65px #10243145}
-.loginCard h1{font-size:39px;margin:7px 0 8px}
-.loginCard>p{color:var(--muted);margin-bottom:22px}
-.loginCard label{display:block;font-size:12px;font-weight:650;margin-bottom:6px}
-.loginRow{display:flex;gap:8px}
-.loginRow input{flex:1;border:1px solid #cad2d6;border-radius:7px;padding:12px}
-.loginRow button{border:0;border-radius:7px;background:var(--blue);color:#fff;padding:0 18px;font-weight:700}
-.err{min-height:17px;color:#914444;font-size:12px;margin-top:5px}
-.loginCard small{display:block;color:#7b858a;margin-top:8px}
-/* Menu lateral */
-.rail{position:fixed;inset:0 auto 0 0;width:var(--rail);background:var(--blue);color:#fff;z-index:90;overflow:hidden;transition:width .18s ease,box-shadow .18s ease}
-.rail:hover,.rail.pinned,.rail:focus-within{width:var(--rail-open);box-shadow:14px 0 34px #14293638}
-.railInner{width:var(--rail-open);height:100%;display:flex;flex-direction:column;padding:11px 7px 9px}
-.brand{height:43px;position:relative;margin-bottom:6px}
-.rail:hover .editionMeta,.rail.pinned .editionMeta,.rail:focus-within .editionMeta{height:auto;opacity:1;padding:10px 2px;margin-bottom:5px}
-.editionMeta strong{display:block;font-size:13px}.editionMeta span{display:block;font-size:10px;color:#d7e2e8;margin-top:3px}
-.railNav{flex:1;overflow:auto;scrollbar-width:none}.railNav::-webkit-scrollbar{display:none}
-.group{height:0;opacity:0;overflow:hidden;font-size:8px;letter-spacing:.11em;text-transform:uppercase;font-weight:750;color:#b8cad5;white-space:nowrap;transition:.1s}
-.rail:hover .group,.rail.pinned .group,.rail:focus-within .group{height:auto;opacity:1;margin:11px 9px 4px}
-.navLink{height:38px;display:flex;align-items:center;gap:10px;padding:0 8px;border-radius:8px;text-decoration:none;color:#dce7ed;white-space:nowrap;position:relative}
-.navLink:hover,.navLink.active{background:#ffffff10;color:#fff}
-.navLink.active:before{content:"";position:absolute;left:0;top:9px;bottom:9px;width:2px;background:#fff;border-radius:2px}
-.navIcon{width:24px;min-width:24px;height:24px;display:grid;place-items:center}
-.navText{opacity:0;font-size:11.5px;font-weight:620;transition:.1s}
-.rail:hover .navText,.rail.pinned .navText,.rail:focus-within .navText{opacity:1}
-.railActions{border-top:1px solid #ffffff1f;padding-top:6px;display:grid;gap:2px}
-.railBtn{height:36px;border:0;background:transparent;color:#dce7ed;display:flex;align-items:center;gap:10px;padding:0 8px;border-radius:8px;white-space:nowrap}
-.railBtn:hover{background:#ffffff10;color:#fff}
-.main{margin-left:var(--rail);transition:margin-left .18s ease}
-body.railPinned .main{margin-left:var(--rail-open)}
-/* topo */
-.topbar{height:var(--top);position:sticky;top:0;z-index:70;background:#fffffff5;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:11px;padding:0 22px}
-.mobileMenu{display:none;border:0;background:transparent;padding:4px;color:var(--ink)}
-.topTitle{font-size:12.5px;font-weight:650;white-space:nowrap}
-.topCurrent{font-size:11px;color:#7c878d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.topSpacer{flex:1}
-.topLink{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--blue);font-weight:750;text-decoration:none}
-.progress{position:absolute;left:0;right:0;bottom:0;height:2px;background:#e8ecee}.progress i{display:block;height:100%;width:0;background:var(--blue)}
-/* PÃ¡gina editorial */
-.canvas{width:min(var(--max),calc(100% - 52px));margin:auto;padding:28px 0 82px}
-.cover{background:var(--paper);border-top:3px solid var(--blue);padding:35px 38px 32px;display:grid;grid-template-columns:1.24fr .76fr;gap:42px;position:relative;overflow:hidden}
-.cover:after{content:"";position:absolute;right:-58px;top:-70px;width:250px;height:250px;background:radial-gradient(circle at center,#345574 0 2px,transparent 3px);opacity:.03}
-.cover h1{margin:9px 0 14px;max-width:760px}
-.cover p{font-size:15px;color:#5d686f;line-height:1.68;max-width:68ch}
-.coverAside{align-self:end;border-left:2px solid var(--blue);padding-left:20px;position:relative;z-index:2}
-.coverAside h2{font-size:23px;margin:7px 0 7px}.coverAside p{font-size:12.8px;line-height:1.55}
-.monthline{display:flex;gap:7px;flex-wrap:wrap;padding:14px 18px;background:var(--blue);color:#fff;margin-bottom:35px}
-.monthline span{font-size:11.5px;color:#e3ebef}.monthline b{font-weight:700}.monthline i{font-style:normal;color:#9fb3c0}
-.section{margin-bottom:44px}
-.sectionHead{display:flex;justify-content:space-between;align-items:end;gap:22px;padding-bottom:13px;border-bottom:1px solid var(--line);margin-bottom:18px}
-.sectionHead h2{margin:4px 0}.sectionHead p{font-size:12.7px;color:#707a80;max-width:68ch}
-.count{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#7d888e;white-space:nowrap;padding-bottom:5px}
-/* O que mudou */
-.changed{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border-top:3px solid var(--blue)}
-.changedItem{padding:18px 20px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:30px 1fr;gap:11px}
-.changedItem:nth-child(odd){border-right:1px solid var(--line)}
-.changedIcon{width:22px;height:22px;border:1px solid #9aafbb;border-radius:50%;display:grid;place-items:center;color:var(--blue);font-size:10px;margin-top:1px}
-.changedItem b{display:block;font-size:14px;margin-bottom:2px}.changedItem p{font-size:11.8px;color:#667179;line-height:1.5}
-/* Novos clientes */
-.clients{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.client{background:#fff;padding:17px;border-top:3px solid var(--blue);min-height:145px}
-.client small{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:#76828a;font-weight:700}
-.client h3{margin:9px 0 5px}.client p{font-size:11.6px;color:#5f696f;line-height:1.48}
-/* Novidades */
-.newsFeature{display:grid;grid-template-columns:1.1fr .9fr;background:#fff;margin-bottom:12px}
-.newsVisual{background:var(--navy);color:#fff;padding:28px}
-.newsVisual h3{font-size:28px;margin:9px 0 8px}.newsVisual p{font-size:12.8px;color:#d7e2e8;max-width:56ch}
-.moduleCloud{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}.moduleCloud span{border:1px solid #ffffff2f;border-radius:999px;padding:6px 9px;font-size:10px;color:#e3ebef}
-.newsCopy{padding:27px}.newsCopy h3{font-size:24px;margin:7px 0 8px}.newsCopy p{font-size:12.5px;color:#5e696f;line-height:1.55}
-.newsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
-.newsCard{background:#fff;padding:17px;min-height:176px}.newsCard h3{margin:7px 0 5px}.newsCard p{font-size:11.7px;color:#5f696f;line-height:1.5}
-.flow{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:12px}.flow span{font-size:9.5px;background:#edf2f4;border-radius:999px;padding:5px 8px;color:#57636a}.flow i{font-style:normal;color:#91a4af}
-/* Oportunidades */
-.opportunities{display:grid;grid-template-columns:1.12fr .88fr;gap:12px}
-.opMain{background:#fff;padding:20px;border-left:4px solid var(--blue)}.opMain h3{font-size:25px;margin:8px 0 7px}.opMain p{font-size:12.5px;color:#5e696f}
-.opNow{margin-top:14px;padding-top:11px;border-top:1px solid var(--line)}.opNow b{font-size:9px;text-transform:uppercase;letter-spacing:.07em;color:var(--blue)}.opNow p{font-size:11.8px;color:#566169;margin-top:3px}
-.opList{background:#fff}.op{padding:14px 15px;border-bottom:1px solid var(--line)}.op:last-child{border-bottom:0}.opTop{display:flex;justify-content:space-between;gap:10px}.op h3{font-size:16.5px}.op span{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);font-weight:750}.op p{font-size:11.3px;color:#67727a;margin-top:3px}
-details.more{margin-top:11px}details.more summary{list-style:none;font-size:11.5px;font-weight:700;color:var(--blue)}details.more summary::-webkit-details-marker{display:none}details.more p{font-size:11.5px;color:#606a71;margin-top:8px}
-/* Parcerias */
-.partners{display:grid;gap:0;background:#fff;border-top:1px solid #222a30}
-.partner{display:grid;grid-template-columns:1.05fr .95fr 1fr;gap:20px;padding:15px 0;border-bottom:1px solid var(--line)}
-.partner h3{font-size:17px}.partner small{display:block;font-size:10px;color:#7a858b;margin-top:3px}.partner b{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--blue)}.partner p{font-size:11.8px;color:#5e686f;margin-top:3px}
-/* Construindo */
-.buildingHero{background:var(--navy);color:#fff;padding:30px 31px;display:grid;grid-template-columns:.82fr 1.18fr;gap:30px;margin-bottom:12px}
-.buildingHero .kicker{color:#c8d9e2}.buildingHero h2{font-size:34px;margin-top:5px}.buildingHero p{font-size:13px;color:#d6e2e8;line-height:1.6}
-.buildList{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
-.build{background:#fff;padding:17px;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start}
-.build h3{margin:6px 0 5px}.build p{font-size:11.7px;color:#5f696f;line-height:1.48}
-.buildType{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:#77848b;font-weight:700;text-align:right}
-.buildStatus{display:inline-block;margin-top:7px;font-size:9px;color:var(--blue);font-weight:700}
-.labStrip{margin-top:12px;background:#eef1f3;padding:15px 16px;display:grid;grid-template-columns:auto 1fr 1fr;gap:16px;align-items:center}
-.labStrip strong{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--blue)}.labStrip b{display:block;font-size:13px}.labStrip p{font-size:10.8px;color:#657078}
-/* Lean por dentro */
-.inside{display:grid;grid-template-columns:1.15fr .85fr;gap:12px}
-.insideMain{background:#fff;padding:21px}.insideMain h3{font-size:25px;margin:7px 0 7px}.insideMain p{font-size:12.4px;color:#5d686f;max-width:64ch}
-.insideSide{display:grid;background:#fff}.insideNote{padding:16px;border-bottom:1px solid var(--line)}.insideNote:last-child{border-bottom:0}.insideNote h3{font-size:17px;margin:5px 0 4px}.insideNote p{font-size:11.5px;color:#5f696f}
-/* PrÃ³ximas semanas */
-.nextWeeks{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
-.next{background:#fff;border-top:3px solid var(--blue);padding:13px 14px;min-height:115px}.next b{display:block;font-size:13px;margin-bottom:4px}.next p{font-size:11px;color:#657078}
-/* Fechamento */
-.editorial{background:var(--warm);padding:28px 30px;display:grid;grid-template-columns:.82fr 1.18fr;gap:32px}
-.lesson strong{font-family:Georgia,serif;font-size:25px;line-height:1.36;font-weight:400;color:var(--blue);display:block;margin:7px 0 8px}
-.lesson p,.reflection p{font-size:12.5px;color:#59636a}
-.reflection{border-left:1px solid #c8c0b3;padding-left:25px}.reflection blockquote{font-family:Georgia,serif;font-size:24px;line-height:1.42;margin:7px 0 9px}
-.question{border-top:1px solid #cac2b5;padding-top:10px;margin-top:11px;font-weight:650;color:#343c41}
-.brandSymbolText{position:absolute;left:4px;top:8px;width:32px;color:#fff;font-weight:800;font-size:16px;letter-spacing:-.08em}.brandFullText{position:absolute;left:4px;top:8px;color:#fff;font-size:20px;font-weight:800;letter-spacing:-.05em;opacity:0;transform:translateX(7px);transition:.15s}.brandFullText span,.loginLogo span,.mobileLogo span,.homeLogo span{font-size:.7em;vertical-align:top;margin-left:2px}.rail:hover .brandSymbolText,.rail.pinned .brandSymbolText,.rail:focus-within .brandSymbolText{opacity:0}.rail:hover .brandFullText,.rail.pinned .brandFullText,.rail:focus-within .brandFullText{opacity:1;transform:none}.loginLogo{font-size:30px;font-weight:800;color:#345574;letter-spacing:-.05em;margin-bottom:26px}.mobileLogo{font-size:24px;font-weight:800;color:#fff;letter-spacing:-.05em;margin-bottom:18px}.homeLogo{font-size:25px;font-weight:800;color:#fff;letter-spacing:-.05em}
-/* Mobile */
+.login{min-height:100vh;display:grid;place-items:center;background:var(--blue);padding:24px}.loginCard{width:min(500px,100%);background:#fff;padding:36px;box-shadow:0 24px 65px #10243145}.logoBlue{font-size:30px;font-weight:800;color:var(--blue);letter-spacing:-.05em;margin-bottom:25px}.logoBlue span,.logoWhite span{font-size:.7em;vertical-align:top;margin-left:2px}.loginCard h1{font-size:39px;margin:7px 0 8px}.loginCard>p{color:var(--muted);margin-bottom:22px}.loginCard label{display:block;font-size:12px;font-weight:650;margin-bottom:6px}.loginRow{display:flex;gap:8px}.loginRow input{flex:1;border:1px solid #cad2d6;padding:12px}.loginRow button{border:0;background:var(--blue);color:#fff;padding:0 18px;font-weight:700}.err{min-height:17px;color:#914444;font-size:12px;margin-top:5px}.loginCard small{display:block;color:#7b858a;margin-top:8px}
+.rail{position:fixed;inset:0 auto 0 0;width:var(--rail);background:var(--blue);color:#fff;z-index:90;overflow:hidden;transition:width .18s ease,box-shadow .18s ease}.rail:hover,.rail.pinned,.rail:focus-within{width:var(--railOpen);box-shadow:14px 0 34px #14293638}.railInner{width:var(--railOpen);height:100%;display:flex;flex-direction:column;padding:11px 8px 9px}.brand{height:43px;position:relative}.brandMini,.brandFull{position:absolute;left:7px;top:6px;font-weight:800;color:#fff;letter-spacing:-.05em}.brandMini{font-size:16px}.brandFull{font-size:20px;opacity:0;transform:translateX(8px);transition:.15s}.rail:hover .brandMini,.rail.pinned .brandMini,.rail:focus-within .brandMini{opacity:0}.rail:hover .brandFull,.rail.pinned .brandFull,.rail:focus-within .brandFull{opacity:1;transform:none}
+.editionMeta{height:0;opacity:0;overflow:hidden;margin:0 4px;border-top:1px solid #ffffff25;border-bottom:1px solid #ffffff25;transition:.12s}.rail:hover .editionMeta,.rail.pinned .editionMeta,.rail:focus-within .editionMeta{height:auto;opacity:1;padding:10px 2px;margin-bottom:5px}.editionMeta strong{display:block;font-size:13px}.editionMeta span{display:block;font-size:10px;color:#d7e2e8;margin-top:3px}
+.railNav{flex:1;overflow:auto;scrollbar-width:none}.railNav::-webkit-scrollbar{display:none}.group{height:0;opacity:0;overflow:hidden;font-size:8px;letter-spacing:.11em;text-transform:uppercase;font-weight:750;color:#b8cad5;white-space:nowrap;transition:.1s}.rail:hover .group,.rail.pinned .group,.rail:focus-within .group{height:auto;opacity:1;margin:11px 9px 4px}
+.navLink,.railBtn{height:38px;display:flex;align-items:center;gap:10px;padding:0 9px;border:0;border-radius:8px;text-decoration:none;color:#dce7ed;white-space:nowrap;position:relative;background:transparent}.navLink:hover,.navLink.active,.railBtn:hover{background:#ffffff10;color:#fff}.navLink.active:before{content:"";position:absolute;left:0;top:9px;bottom:9px;width:2px;background:#fff}.ico{width:22px;min-width:22px;text-align:center;font-size:14px}.navText{opacity:0;font-size:11.5px;font-weight:620;transition:.1s}.rail:hover .navText,.rail.pinned .navText,.rail:focus-within .navText{opacity:1}.railActions{border-top:1px solid #ffffff1f;padding-top:6px}.main{margin-left:var(--rail);transition:margin-left .18s ease}body.railPinned .main{margin-left:var(--railOpen)}
+.topbar{height:var(--top);position:sticky;top:0;z-index:70;background:#fffffff5;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:11px;padding:0 22px}.mobileMenu{display:none;border:0;background:transparent;color:var(--ink)}.topTitle{font-size:12.5px;font-weight:650}.topCurrent{font-size:11px;color:#7c878d}.topSpacer{flex:1}.topLink{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--blue);font-weight:750;text-decoration:none}.progress{position:absolute;left:0;right:0;bottom:0;height:2px;background:#e8ecee}.progress i{display:block;height:100%;width:0;background:var(--blue)}
+.canvas{width:min(var(--max),calc(100% - 52px));margin:auto;padding:28px 0 82px}.cover{background:var(--paper);border-top:3px solid var(--blue);padding:35px 38px 32px;display:grid;grid-template-columns:1.24fr .76fr;gap:42px}.cover h1{margin:9px 0 14px;max-width:760px}.cover p{font-size:15px;color:#5d686f;line-height:1.68;max-width:68ch}.coverAside{align-self:end;border-left:2px solid var(--blue);padding-left:20px}.coverAside h2{font-size:23px;margin:7px 0}.coverAside p{font-size:12.8px;line-height:1.55}
+.monthline{display:flex;gap:7px;flex-wrap:wrap;padding:14px 18px;background:var(--blue);color:#fff;margin-bottom:35px}.monthline span{font-size:11.5px;color:#e3ebef}.monthline b{font-weight:700}.monthline i{font-style:normal;color:#9fb3c0}
+.section{margin-bottom:44px}.sectionHead{display:flex;justify-content:space-between;align-items:end;gap:22px;padding-bottom:13px;border-bottom:1px solid var(--line);margin-bottom:18px}.sectionHead h2{margin:4px 0}.sectionHead p{font-size:12.7px;color:#707a80;max-width:68ch}.count{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#7d888e;white-space:nowrap;padding-bottom:5px}
+.changed{display:grid;grid-template-columns:1fr 1fr;background:#fff;border-top:3px solid var(--blue)}.changedItem{padding:18px 20px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:30px 1fr;gap:11px}.changedItem:nth-child(odd){border-right:1px solid var(--line)}.changedIcon{width:22px;height:22px;border:1px solid #9aafbb;border-radius:50%;display:grid;place-items:center;color:var(--blue);font-size:10px}.changedItem b{display:block;font-size:14px;margin-bottom:2px}.changedItem p{font-size:11.8px;color:#667179}
+.clients{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.client{background:#fff;padding:17px;border-top:3px solid var(--blue);min-height:142px}.client small{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:#76828a;font-weight:700}.client h3{margin:9px 0 5px}.client p{font-size:11.6px;color:#5f696f}
+.newsFeature{display:grid;grid-template-columns:1.1fr .9fr;background:#fff;margin-bottom:12px}.newsVisual{background:var(--navy);color:#fff;padding:28px}.newsVisual h3{font-size:28px;margin:9px 0 8px}.newsVisual p{font-size:12.8px;color:#d7e2e8}.moduleCloud{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}.moduleCloud span{border:1px solid #ffffff2f;border-radius:999px;padding:6px 9px;font-size:10px;color:#e3ebef}.newsCopy{padding:27px}.newsCopy h3{font-size:24px;margin:7px 0 8px}.newsCopy p{font-size:12.5px;color:#5e696f}.newsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.newsCard{background:#fff;padding:17px;min-height:176px}.newsCard h3{margin:7px 0 5px}.newsCard p{font-size:11.7px;color:#5f696f}.flow{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:12px}.flow span{font-size:9.5px;background:#edf2f4;border-radius:999px;padding:5px 8px;color:#57636a}.flow i{font-style:normal;color:#91a4af}
+.opportunities{display:grid;grid-template-columns:1.12fr .88fr;gap:12px}.opMain{background:#fff;padding:20px;border-left:4px solid var(--blue)}.opMain h3{font-size:25px;margin:8px 0 7px}.opMain p{font-size:12.5px;color:#5e696f}.opNow{margin-top:14px;padding-top:11px;border-top:1px solid var(--line)}.opNow b{font-size:9px;text-transform:uppercase;letter-spacing:.07em;color:var(--blue)}.opNow p{font-size:11.8px;color:#566169;margin-top:3px}.opList{background:#fff}.op{padding:14px 15px;border-bottom:1px solid var(--line)}.op:last-child{border-bottom:0}.opTop{display:flex;justify-content:space-between;gap:10px}.op h3{font-size:16.5px}.op span{font-size:9px;text-transform:uppercase;color:var(--blue);font-weight:750}.op p{font-size:11.3px;color:#67727a;margin-top:3px}details.more{margin-top:11px}details.more summary{list-style:none;font-size:11.5px;font-weight:700;color:var(--blue)}details.more summary::-webkit-details-marker{display:none}details.more p{font-size:11.5px;color:#606a71;margin-top:8px}
+.partners{background:#fff;border-top:1px solid #222a30}.partner{display:grid;grid-template-columns:1.05fr .95fr 1fr;gap:20px;padding:15px 0;border-bottom:1px solid var(--line)}.partner h3{font-size:17px}.partner small{display:block;font-size:10px;color:#7a858b;margin-top:3px}.partner b{font-size:9px;text-transform:uppercase;color:var(--blue)}.partner p{font-size:11.8px;color:#5e686f;margin-top:3px}
+.buildingHero{background:var(--navy);color:#fff;padding:30px 31px;display:grid;grid-template-columns:.82fr 1.18fr;gap:30px;margin-bottom:12px}.buildingHero .kicker{color:#c8d9e2}.buildingHero h2{font-size:34px;margin-top:5px}.buildingHero p{font-size:13px;color:#d6e2e8}.buildList{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}.build{background:#fff;padding:17px;display:grid;grid-template-columns:1fr auto;gap:12px}.build h3{margin:6px 0 5px}.build p{font-size:11.7px;color:#5f696f}.buildType{font-size:9px;text-transform:uppercase;color:#77848b;font-weight:700}.buildStatus{display:inline-block;margin-top:7px;font-size:9px;color:var(--blue);font-weight:700}.labStrip{margin-top:12px;background:#eef1f3;padding:15px 16px;display:grid;grid-template-columns:auto 1fr 1fr;gap:16px;align-items:center}.labStrip strong{font-size:11px;text-transform:uppercase;color:var(--blue)}.labStrip b{display:block;font-size:13px}.labStrip p{font-size:10.8px;color:#657078}
+.inside{display:grid;grid-template-columns:1.15fr .85fr;gap:12px}.insideMain{background:#fff;padding:21px}.insideMain h3{font-size:25px;margin:7px 0}.insideMain p{font-size:12.4px;color:#5d686f}.insideSide{background:#fff}.insideNote{padding:16px;border-bottom:1px solid var(--line)}.insideNote:last-child{border-bottom:0}.insideNote h3{font-size:17px;margin:5px 0 4px}.insideNote p{font-size:11.5px;color:#5f696f}
+.nextWeeks{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}.next{background:#fff;border-top:3px solid var(--blue);padding:13px 14px;min-height:112px}.next b{display:block;font-size:13px;margin-bottom:4px}.next p{font-size:11px;color:#657078}
+.editorial{background:var(--warm);padding:28px 30px;display:grid;grid-template-columns:.82fr 1.18fr;gap:32px}.lesson strong{font-family:Georgia,serif;font-size:25px;line-height:1.36;font-weight:400;color:var(--blue);display:block;margin:7px 0 8px}.lesson p,.reflection p{font-size:12.5px;color:#59636a}.reflection{border-left:1px solid #c8c0b3;padding-left:25px}.reflection blockquote{font-family:Georgia,serif;font-size:24px;line-height:1.42;margin:7px 0 9px}.question{border-top:1px solid #cac2b5;padding-top:10px;margin-top:11px;font-weight:650;color:#343c41}
 .mobileOverlay{display:none}
-@media(max-width:980px){
- .rail{display:none}.main,body.railPinned .main{margin-left:0}
- .mobileMenu{display:grid;place-items:center}
- .mobileOverlay.show{display:block;position:fixed;inset:0;background:#102431b8;z-index:110}
- .mobileDrawer{width:min(84vw,310px);height:100%;background:var(--blue);color:#fff;padding:18px;overflow:auto;scrollbar-width:none}.mobileDrawer::-webkit-scrollbar{display:none}
- .mobileGroup{font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#b8cbd6;font-weight:750;margin:15px 0 4px}
- .mobileDrawer .loginLogo{color:#fff;margin:0 0 18px;font-size:24px}.mobileDrawer a{display:flex;align-items:center;gap:9px;color:#e2ebf0;text-decoration:none;padding:9px 0;border-bottom:1px solid #ffffff15;font-size:12px}
- .cover,.newsFeature,.opportunities,.buildingHero,.inside,.editorial{grid-template-columns:1fr}
- .coverAside{border-left:0;border-top:2px solid var(--blue);padding:14px 0 0}
- .clients,.newsGrid,.nextWeeks{grid-template-columns:1fr 1fr}
- .partner{grid-template-columns:1fr}
-}
-@media(max-width:700px){
- body{font-size:14px}.canvas{width:min(100% - 28px,var(--max));padding-top:16px}
- .topbar{padding:0 13px}.topCurrent,.topLink{display:none}
- .cover{padding:25px 21px}.cover h1{font-size:36px}
- .monthline{margin-left:0;margin-right:0}
- .changed,.clients,.newsGrid,.buildList,.nextWeeks{grid-template-columns:1fr}
- .changedItem:nth-child(odd){border-right:0}
- .labStrip{grid-template-columns:1fr}
- .reflection{border-left:0;border-top:1px solid #c8c0b3;padding:19px 0 0}
- .section{margin-bottom:36px}
-}
-</style></head><body><section id="login" class="login"><div class="loginCard"><div class="loginLogo">LeanCo.<span>â</span></div><div class="kicker">Ambiente interno</div><h1>Informativo Lean</h1><p>Um resumo do que estÃ¡ acontecendo dentro da Lean.</p><label>Senha</label><div class="loginRow"><input id="password" type="password" placeholder="Digite a senha"><button onclick="unlock()">Entrar</button></div><div id="err" class="err"></div><small>ProtÃ³tipo: senha <b>lean</b>.</small></div></section><div id="app" class="hidden"><aside class="rail" id="rail"><div class="railInner"><div class="brand"><div class="brandSymbolText">Lâ</div><div class="brandFullText">LeanCo.<span>â</span></div></div><div class="editionMeta"><strong>Informativo Lean</strong><span>Setembro de 2026</span></div><nav class="railNav"><div class="group">InÃ­cio</div><a class="navLink" href="#inicio" data-label="InÃ­cio" title="InÃ­cio"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/><path d="M9 20v-6h6v6"/></svg></span><span class="navText">InÃ­cio</span></a><a class="navLink" href="#mudou" data-label="O que mudou" title="O que mudou"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l1.3 4.7L18 8l-4.7 1.3L12 14l-1.3-4.7L6 8l4.7-1.3z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></span><span class="navText">O que mudou</span></a><div class="group">Acontecendo</div><a class="navLink" href="#novos" data-label="Novos clientes" title="Novos clientes"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><span class="navText">Novos clientes</span></a><a class="navLink" href="#novidades" data-label="Novidades da Lean" title="Novidades da Lean"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l1.3 4.7L18 8l-4.7 1.3L12 14l-1.3-4.7L6 8l4.7-1.3z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></span><span class="navText">Novidades da Lean</span></a><a class="navLink" href="#oportunidades" data-label="O que pode vir por aÃ­" title="O que pode vir por aÃ­"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 9 11l4 4 8-9"/><path d="M15 6h6v6"/></svg></span><span class="navText">O que pode vir por aÃ­</span></a><a class="navLink" href="#parcerias" data-label="Parcerias &amp; conexÃµes" title="Parcerias &amp; conexÃµes"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"/><path d="M14 11a5 5 0 0 0-7.1 0l-2 2A5 5 0 0 0 12 20.1l1.1-1.1"/></svg></span><span class="navText">Parcerias &amp; conexÃµes</span></a><div class="group">Construindo</div><a class="navLink" href="#construindo" data-label="O que estamos construindo" title="O que estamos construindo"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg><span class="navText">O que estamos construindo</span></a><a class="navLink" href="#dentro" data-label="Lean por dentro" title="Lean por dentro"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="MKPLHHHHÒL]MPLHHK^Ï]HLKPLHHMËHÒLÝMPLHHHK^ÏÜÝÏÜ[Û\ÜÏH]^X[Ü[ÏÜÜ[ØO]Û\ÜÏHÜÝ\XÚ[Y[ÏÙ]HÛ\ÜÏH][ÈYHÜÞ[X\È]K[X[H°ìÞ[X\ÈÙ[X[\È]OH°ìÞ[X\ÈÙ[X[\ÈÜ[Û\ÜÏH]XÛÛÝÈÚYHNZYÚHNY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HMHLMÏ]HLMÈHKMHHÏÜÝÏÜÜ[Ü[Û\ÜÏH]^°ìÞ[X\ÈÙ[X[\ÏÜÜ[ØOHÛ\ÜÏH][ÈYHÜY^[È]K[X[H\[^YÈ]OH\[^YÈÜ[Û\ÜÏH]XÛÛÝÈÚYHNZYÚHNY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HMÈMÒÝMMHMØLÈÈLÈÝZ^Ï]HLNMÚMMMHMØLÈÈLÈÝZ^ÏÜÝÏÜÜ[Ü[Û\ÜÏH]^\[^YÏÜÜ[ØOÛ]]Û\ÜÏHZ[XÝ[ÛÈ]ÛÛ\ÜÏHZ[ÛÛXÚÏHÜ[ÛÛX][Û
-HÜ[Û\ÜÏH]XÛÛÝÈÚYHNZYÚHNY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HLL]MÏ]HMHLMÏÜÝÏÜÜ[Ü[Û\ÜÏH]^[X\]X[^péðèÛÈÜÜ[Ø]Û]ÛÛ\ÜÏHZ[ÛÛXÚÏHØØ][ÛYIËÉÈÜ[Û\ÜÏH]XÛÛÝÈÚYHNZYÚHNY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HMÚMÏ]HMHÝLÚMÈÏ]HLÈNÒÞÏ]HLLLZÏÜÝÏÜÜ[Ü[Û\ÜÏH]^YpéðíY\È[\[Ü\ÏÜÜ[Ø]Û]ÛÛ\ÜÏHZ[ÛÛXÚÏH[Z[
+@media(max-width:980px){.rail{display:none}.main,body.railPinned .main{margin-left:0}.mobileMenu{display:block}.mobileOverlay.show{display:block;position:fixed;inset:0;background:#102431b8;z-index:110}.mobileDrawer{width:min(84vw,310px);height:100%;background:var(--blue);color:#fff;padding:18px;overflow:auto}.mobileDrawer .logoWhite{font-size:24px;font-weight:800;margin-bottom:18px}.mobileGroup{font-size:8px;text-transform:uppercase;color:#b8cbd6;font-weight:750;margin:15px 0 4px}.mobileDrawer a{display:flex;gap:9px;color:#e2ebf0;text-decoration:none;padding:9px 0;border-bottom:1px solid #ffffff15;font-size:12px}.cover,.newsFeature,.opportunities,.buildingHero,.inside,.editorial{grid-template-columns:1fr}.coverAside{border-left:0;border-top:2px solid var(--blue);padding:14px 0 0}.clients,.newsGrid,.nextWeeks{grid-template-columns:1fr 1fr}.partner{grid-template-columns:1fr}}
+@media(max-width:700px){body{font-size:14px}.canvas{width:min(100% - 28px,var(--max));padding-top:16px}.topbar{padding:0 13px}.topCurrent,.topLink{display:none}.cover{padding:25px 21px}.cover h1{font-size:36px}.changed,.clients,.newsGrid,.buildList,.nextWeeks{grid-template-columns:1fr}.changedItem:nth-child(odd){border-right:0}.labStrip{grid-template-columns:1fr}.reflection{border-left:0;border-top:1px solid #c8c0b3;padding:19px 0 0}.section{margin-bottom:36px}}
+</style>
+</head>
+<body>
+<section id="login" class="login">
+  <div class="loginCard"><div class="logoBlue">LeanCo.<span>↗</span></div><div class="kicker">Ambiente interno</div><h1>Informativo Lean</h1><p>Um resumo do que está acontecendo dentro da Lean.</p><label>Senha</label><div class="loginRow"><input id="password" type="password" placeholder="Digite a senha"><button onclick="unlock()">Entrar</button></div><div id="err" class="err"></div><small>Protótipo: senha <b>lean</b>.</small></div>
+</section>
 
-HÜ[Û\ÜÏH]XÛÛÝÈÚYHNZYÚHNY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HLMLÈKMLHKLLLLKLHMÏ]HMKMHÏÜÝÏÜÜ[Ü[Û\ÜÏH]^YH[^^\Y[OÜÜ[Ø]Û]ÛÛ\ÜÏHZ[ÛÛXÚÏHØÚÊ
-HÜ[Û\ÜÏH]XÛÛÝÈÚYHNZYÚHNY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HLLMÛKMKMKMHÏ]HLMHLÈÏ]HLMÚNMÏÜÝÏÜÜ[Ü[Û\ÜÏH]^ØZ\ÜÜ[Ø]ÛÙ]Ù]Ø\ÚYO]Û\ÜÏH[Ø[SÝ\^HYH[Ø[SÝ\^HÛÛXÚÏHÝ\^PÛÜÙJ][
-H]Û\ÜÏH[Ø[Q]Ù\]Û\ÜÏHÙÚ[ÙÛÈX[ÛËÜ[¸¡¥ÏÜÜ[Ù]]Û\ÜÏH[Ø[QÜÝ\[°ëXÚ[ÏÙ]HYHÚ[XÚ[ÈÛÛXÚÏHÛÜÙS[Ø[J
-HÝÈÚYHMÈZYÚHMÈY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HLÈLKHLHËHÏ]HMKHLULÝNKHÏ]HNHMÏÜÝÏÜ[[°ëXÚ[ÏÜÜ[ØOHYHÛ]YÝHÛÛXÚÏHÛÜÙS[Ø[J
-HÝÈÚYHMÈZYÚHMÈY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HLLKÈÓNMÈKÓLMLKËMÓËLKÞÏ]HLNHM[NLNH[KLMNKÏÜÝÏÜ[È]YH]YÝOÜÜ[ØO]Û\ÜÏH[Ø[QÜÝ\XÛÛXÙ[ÏÙ]HYHÛÝÜÈÛÛXÚÏHÛÜÙS[Ø[J
-HÝÈÚYHMÈZYÚHMÈY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HMHLNHÏÜÝÏÜ[ÝÜÈÛY[\ÏÜÜ[ØOHYHÛÝYY\ÈÛÛXÚÏHÛÜÙS[Ø[J
-HÝÈÚYHMÈZYÚHMÈY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HLLKÈÓNMÈKÓLMLKËMÓËLKÞÏ]HLNHM[NLNH[KLMNKÏÜÝÏÜ[ÝYY\ÈHX[ÜÜ[ØOHYHÛÜÜ[YY\ÈÛÛXÚÏHÛÜÙS[Ø[J
-HÝÈÚYHMÈZYÚHMÈY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HLÈMÈHL[NHÏ]HLMHÏÜÝÏÜ[È]YHÙH\ÜpëOÜÜ[ØOHYHÜ\Ù\X\ÈÛÛXÚÏHÛÜÙS[Ø[J
-HÝÈÚYHMÈZYÚHMÈY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HLLLØMHHËHLMHHMËKMË[LKHKHÏ]HLMLXMHHMËHLMHHL[KKLKHÏÜÝÏÜ[\Ù\X\È	[\ÈÛÛ^0íY\ÏÜÜ[ØO]Û\ÜÏH[Ø[QÜÝ\ÛÛÝZ[ÏÙ]HYHØÛÛÝZ[ÈÛÛXÚÏHÛÜÙS[Ø[J
-HÝÈÚYHMÈZYÚHMÈY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HLLHKNHKNKM^Ï]HLÈLHHKMHÏ]HLÈMÈHHKMHÏÜÝÏÜ[È]YH\Ý[[ÜÈÛÛÝZ[ÏÜÜ[ØOHYHÙ[ÈÛÛXÚÏHÛÜÙS[Ø[J
-HÝÈÚYHMÈZYÚHMÈY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HMKPLHHHHÒL]MPLHHK^Ï]HLKPLHHMËHÒLÝMPLHHHK^ÏÜÝÏÜ[X[Ü[ÏÜÜ[ØO]Û\ÜÏH[Ø[QÜÝ\XÚ[Y[ÏÙ]HYHÜÞ[X\ÈÛÛXÚÏHÛÜÙS[Ø[J
-HÝÈÚYHMÈZYÚHMÈY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HMHLMÏ]HLMÈHKMHHÏÜÝÏÜ[°ìÞ[X\ÈÙ[X[\ÏÜÜ[ØOHYHÜY^[ÈÛÛXÚÏHÛÜÙS[Ø[J
-HÝÈÚYHMÈZYÚHMÈY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HMÈMÒÝMMHMØLÈÈLÈÝZ^Ï]HLNMÚMMMHMØLÈÈLÈÝZ^ÏÜÝÏÜ[\[^YÏÜÜ[ØO]Û\ÜÏH[Ø[QÜÝ\péðíY\ÏÙ]HYHÈÛÛXÚÏHÜ[ÛÛX][Û
-NØÛÜÙS[Ø[J
-NÜ]\[ÙHÝÈÚYHMÈZYÚHMÈY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HLL]MÏ]HMHLMÏÜÝÏÜ[[X\]X[^péðèÛÏÜÜ[ØOHYHÈÝÈÚYHMÈZYÚHMÈY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HMÚMÏ]HMHÝLÚMÈÏ]HLÈNÒÞÏ]HLLLZÏÜÝÏÜ[YpéðíY\È[\[Ü\ÏÜÜ[ØOÙ]Ù]XZ[Û\ÜÏHXZ[XY\Û\ÜÏHÜ\]ÛÛ\ÜÏH[Ø[SY[HÛÛXÚÏHÜ[[Ø[J
-HÝÈÚYHZYÚHY]ÐÞH[HÛHÝÚÙOHÝ\[ÛÛÜÝÚÙK]ÚYHKÝÚÙK[[XØ\HÝ[ÝÚÙK[[ZÚ[HÝ[\XKZY[HYH]HMMMLMMNMÏÜÝÏØ]Û]Û\ÜÏHÜ]H[ÜX]]ÈX[0­ÈÙ][XÈHÙ]]Û\ÜÏHÜÝ\[YHÝ\[[°ëXÚ[ÏÙ]]Û\ÜÏHÜÜXÙ\Ù]HÛ\ÜÏHÜ[ÈYHÈYpéðíY\È[\[Ü\ÏØO]Û\ÜÏHÙÜ\ÜÈHYH\ÚOÙ]ÚXY\]Û\ÜÏHØ[\ÈÙXÝ[ÛÛ\ÜÏHÛÝ\YH[XÚ[È]]Û\ÜÏHÚXÚÙ\Ù][XÈH0­È]X[^YÈ[HKÌOÙ]OXZ\ÈÛY[\ËÝ\È\[Y[\ÈH[XHX[ØYH^XZ\ÈYÚ][ÚO[H\Ý[[È\HÙH[Z\\\Y[Y[HÛØHÝÜÈÚ]ÜËÜÜðë]Z\È\Ù\X\Ë\[Y[\Ë[Ý[Y[ÜÈÛÛY\ÚXZ\ÈHÈ]YH\Ý0èH]Y[È[ÈH[\\ØKÜÙ]\ÚYHÛ\ÜÏHÛÝ\\ÚYH]Û\ÜÏHÚXÚÙ\[H[XH\ÙOÙ]Ù][XÈ°èÛÈÚHðìÈÛÛY\ÚX[Ú[0ê[HÜÈXÚ[Y[ÜËHX[][°éÛÝHHÛÛÝpéðèÛÈH\[Y[\È°ìÜX\Ë[Ú[ËÜÜÝ\ÈYÚ]Z\ËPÈHÝÜÈ[XY[\È\HÛY[\ËÜØ\ÚYOÜÙXÝ[Û]Û\ÜÏH[Û[H\ÝHpêÏØO¸ (ÚOÜ[ÝÜÈÛÛ]ÜÏÜÜ[O¸ (ÚOÜ[HYÛØÚXpéðíY\È]]\ÏÜÜ[O¸ (ÚOÜ[H\Ù\X\È[H\Ý]\péðèÛÏÜÜ[O¸ (ÚOÜ[ÔH°ìÜ[ÏÜÜ[O¸ (ÚOÜ[[Ú[ÈX[ÜÜ[O¸ (ÚOÜ[Ú]ÜÈHÝ0ìÝ\ÜÈYÚ]Z\ÏÜÜ[Ù]ÙXÝ[ÛÛ\ÜÏHÙXÝ[ÛYH]YÝH]Û\ÜÏHÙXÝ[ÛXY]]Û\ÜÏHÚXÚÙ\\ÙHH0î[XHYpéðèÛÏÙ]È]YH]YÝHH\YOÚHZ]\H°è\YH\H]Y[HðìÈ]Y\ÙH]X[^\ÜÙ]Ù]]Û\ÜÏHÚ[ÙY]Û\ÜÏHÚ[ÙY][H]Û\ÜÏHÚ[ÙYXÛÛ¸§$ÏÙ]]UÈYXðèXØHXÚÝOØÝÈÚ]È[[È[H[\[péðèÛËÜÙ]Ù]]Û\ÜÏHÚ[ÙY][H]Û\ÜÏHÚ[ÙYXÛÛ¸§$ÏÙ]]\[Z\\È\\[YÙ[HXÚÝOØY[ÜXHÛÛ\XYKÜÙ]Ù]]Û\ÜÏHÚ[ÙY][H]Û\ÜÏHÚ[ÙYXÛÛ¸§$ÏÙ]][\[ÛÈ[pìÝZ\È[ÝH\HHØ\Z\OØY[ÜXH
-ÈËÜÙ]Ù]]Û\ÜÏHÚ[ÙY][H]Û\ÜÏHÚ[ÙYXÛÛ¸§$ÏÙ]]X[XÝÈ][°éÛÝH\HÛÛ]péðèÛÏØÚ]ÈHX\ÈÜpêËÜÙ]Ù]]Û\ÜÏHÚ[ÙY][H]Û\ÜÏHÚ[ÙYXÛÛÏÙ]]ÔH°ìÜ[È]ÛZ]OØÝHØ[XYH\HÜØ[^\HÝ[HÛÛY\ÚX[HX[ÜÙ]Ù]]Û\ÜÏHÚ[ÙY][H]Û\ÜÏHÚ[ÙYXÛÛÏÙ]][Ú[ÈX[Ø[ÝHÛÜÏØH]YÜXHHØ\XÚ]péðèÛÈÜÈÛY[\ÈÛÛ[XH]ÛZ[ËÜÙ]Ù]]Û\ÜÏHÚ[ÙY][H]Û\ÜÏHÚ[ÙYXÛÛÏÙ]]ÐHHY[[\[HÛÛ[ÈÝ\ÈHÛÛÙZ]ÏØÝ\È[[ÛÝpéðíY\ÈH[YØH[HSÜÙ]Ù]]Û\ÜÏHÚ[ÙY][H]Û\ÜÏHÚ[ÙYXÛÛÏÙ]]ÈXÛÜÜÚ\Ý[XHYÚ][XÛÝHXZ[ÜØÚ]K\[Ú[ËÜÜÝ\ËXYÛ°ìÜÝXÛË\[Y[\ÈH0è\XHÈÛY[KÜÙ]Ù]Ù]ÜÙXÝ[ÛÙXÝ[ÛÛ\ÜÏHÙXÝ[ÛYHÝÜÈ]Û\ÜÏHÙXÝ[ÛXY]]Û\ÜÏHÚXÚÙ\ÝÜÈÛY[\È	Ú]ÜÏÙ]È]YH[ÝH\HHØ\Z\OÚÈ\ÜÙ[ÚX[\HÈ[YHØX\]Y[HÚYÛÝHH]X[0êHH[H[Ú\[ÜÙ]]Û\ÜÏHÛÝ[XÚ[Y[ÜÏÙ]Ù]]Û\ÜÏHÛY[È\XÛHÛ\ÜÏHÛY[ÛX[Y[ÜXOÜÛX[ÏX[XÝÏÚÏYÜË\Ý]0êYÚXHH[[ÙZ\ËÜØ\XÛO\XÛHÛ\ÜÏHÛY[ÛX[Y[ÜXOÜÛX[Ï\[Z\\È\\[YÙ[OÚÏ\Ý]\péðèÛÈÙ\[ÚX[ÜØ\XÛO\XÛHÛ\ÜÏHÛY[ÛX[ÛÛÝ[ÜXOÜÛX[ÏUÈYXðèXØOÚÏ[[ÙZ\ËÙpéðèÛÈHÙ\Ý0èÛËÜØ\XÛO\XÛHÛ\ÜÏHÛY[ÛX[Y[ÜXH
-ÈÏÜÛX[Ï[\[ÛÈ[pìÝZ\ÏÚÏÚ]ÈÛÛX[YÈHÙ\Ý0èÛÈHÜ\péðèÛÈ[[ÙZ\KÜØ\XÛOÙ]ÜÙXÝ[ÛÙXÝ[ÛÛ\ÜÏHÙXÝ[ÛYHÝYY\È]Û\ÜÏHÙXÝ[ÛXY]]Û\ÜÏHÚXÚÙ\ÝYY\ÈHX[Ù]È]YH]YÝHHÜXHÛÛ[È\Ý[[ÜÈX[[ÏÚ\[Y[\ÈH\Ý]\\È]YHZY[HHX[HÜ\\H[YØ\Y[ÜÜÙ]Ù]\XÛHÛ\ÜÏH]ÜÑX]\H]Û\ÜÏH]ÜÕ\ÝX[]Û\ÜÏHÚXÚÙ\Ý[OHÛÛÜØÍÙYLÈÚ]È[H\Ý\]YOÙ]ÏX\Ý\ÚÜ[ÏÚÏ°è\X\È[°è[\Ù\ÈÛÛYpéØ[HHZ^\H]\Ù\\Y\ÈH\ÜØ[HHÜX\[H0îXÛÈPÙ\[ÚX[Ü]Û\ÜÏH[Ù[PÛÝYÜ[]\[Y[ÏÜÜ[Ü[Ü°êY]ÏÜÜ[Ü[[Z]H^OÜÜ[Ü[Z^\ÏÜÜ[Ü[ÛY[HÍÜÜ[Ü[Ú\È	ÝZX\ÏÜÜ[Ù]Ù]]Û\ÜÏH]ÜÐÛÜH]Û\ÜÏHÚXÚÙ\Ü]YH\ÜÛÈ[\ÜOÙ]Ï[XH[YØH]YHÛÛYpéØHH\XÙ\Ù]ËÚÏÈX\Ý\P0êH[HÛH^[\ÈHÛÛ[È[XHXÙ\ÜÚYYH\ÜXðëYXØHÈÛY[HÙH\\[XH]YÜXHÜØ[^YK]Û]]HHÝ[ÚX[Y[HX\ÝZ]0è][[HÝ]ÜÈÛÛ^ÜËÜÙ]Ø\XÛO]Û\ÜÏH]ÜÑÜY\XÛHÛ\ÜÏH]ÜÐØ\]Û\ÜÏHÚXÚÙ\\[Y[H[\OÙ]ÏÔHX[ÚÏHÝ[HÛÛY\ÚX[YÛÜHÛÛHÛÛH[XH\[Y[H°ìÜXH[HÛÛÙÛHÚY]È
-È\ÈØÜ\ÛÛH[\XÙHH\Ý0ìÜXÛÈÛÛY\ÚX[Ü]Û\ÜÏHÝÈÜ[ÛÛ]ÏÜÜ[O¸¡¤ÚOÜ[XYÛ°ìÜÝXÛÏÜÜ[O¸¡¤ÚOÜ[ÜÜÝOÜÜ[O¸¡¤ÚOÜ[°ìÞ[[È\ÜÛÏÜÜ[Ù]Ø\XÛO\XÛHÛ\ÜÏH]ÜÐØ\]Û\ÜÏHÚXÚÙ\[Ú[ÈX[Ù]Ï]YÜXH\HÛY[\ÏÚÏÈ[Ú[ËX[ÛÛ\[KÛÛK\Ý0èH]ÛZ[È\HÛÛÙ[\ÛÛpîÜÈÛØHÙ\Ý0èÛÈ[[ÙZ\K[XØYÜ\ËØÙ\ÜÛÜËÙpéðèÛÈH\ÛÈ\È\[Y[\ÈÜÈÚ]ÜËÜ]Û\ÜÏHÝÈÜ[[[Y[ÜÏÜÜ[O¸¡¤ÚOÜ[Ù\Ý0èÛÏÜÜ[O¸¡¤ÚOÜ[\[Y[\ÏÜÜ[Ù]Ø\XÛO\XÛHÛ\ÜÏH]ÜÐØ\]Û\ÜÏHÚXÚÙ\\Ù[°éØHYÚ][Ù]ÏÝÈÚ]H
-ÈÝÜÈ[XY[\ÏÚÏÈÚ]H[Ý]XÚ[Û[\Ý0èHÙ[ÈXÛÛÝpëYÈHH\]Z]]\HYÚ][ÛÛYpéØHHÙ\\\\[Ú[ËÜÜÝ\ËXYÛ°ìÜÝXÛË\[Y[\ÈH0è\XHÈÛY[KÜØ\XÛOÙ]ÜÙXÝ[ÛÙXÝ[ÛÛ\ÜÏHÙXÝ[ÛYHÜÜ[YY\È]Û\ÜÏHÙXÝ[ÛXY]]Û\ÜÏHÚXÚÙ\È]YHÙH\ÜpëOÙ]YÛØÚXpéðíY\È]YH[HH\]Z\HÛÛXÙ\Ú°èÛÈ0êH[XHðìÜXHÈÔKðèÛÈ\[\È\ÈÛÛ\Ø\ÈÛÛHÛÛ^ÈXZ\È[][H\ÝH[ÛY[ËÜÙ]Ù]]Û\ÜÏHÜÜ[]Y\È\XÛHÛ\ÜÏHÜXZ[]Û\ÜÏHÚXÚÙ\YÛØÚXpéðèÛÈ[H\Ý\]YOÙ]ÏÚY]XÈ[ÛOÚÏÜÜÝH\\Ù[YH\HX\X[Y[ÈHØÙ\ÜÛÜÈÈH[ÛKÛÛHÙ\ØHH\ÜÛØ\ËÜ]Û\ÜÏHÜÝÈYÛÜOØYÝX\[È]ÜÈÛØHHÜÜÝH\\Ù[YKÜÙ]Ø\XÛO]Û\ÜÏHÜ\Ý\XÛHÛ\ÜÏHÜ]Û\ÜÏHÜÜÏ[ÛÜÜÝ\ÏÚÏÜ[ÜÜÝH[XYOÜÜ[Ù]Z[[Y[ÈX[[H][XpéðèÛÈ[H\]ÜXKÜØ\XÛO\XÛHÛ\ÜÏHÜ]Û\ÜÏHÜÜÏ]ÏÚÏÜ[XYÛ°ìÜÝXÛÏÜÜ[Ù]ÝHÛÛ\ØH[Û[ÈY[ÜXH
-ÈËÜØ\XÛO\XÛHÛ\ÜÏHÜ]Û\ÜÏHÜÜÏP\Ü]XYX\ÏÚÏÜ[ÜÜÝH[XYOÜÜ[Ù]Ú]ÈHÙpéðèÛÈÛÛHÝ[ÚX[HXÛÜ°êÚXKÜØ\XÛO\XÛHÛ\ÜÏHÜ]Û\ÜÏHÜÜÏX\È]]ÈÜÝÏÚÏÜ[ÜÜÝH[XYOÜÜ[Ù]Y[ÜXH\HHÜ\péðèÛËÜØ\XÛOÙ]Ù]]Z[ÈÛ\ÜÏH[ÜHÝ[[X\OÈ\Ý]\ÈMÜÜ[YY\È[HXÛÛ\[[Y[ÏÜÝ[[X\O\\Û]H0­ÈXÝÜ\0­ÈÛÛXÛÛ0­ÈÜ^[0­È^Ù[[ÙHÈ0­ÈÛÛÜ0­ÈÛÛ[HÛÛÝ[ÜXH0­È[péðèÛÈØ\Z°è\È0­ÈÜÝpêHYZ\H0­ÈÓ0­ÈÚ\Ý[X\È0­È[\ÛÙ0­ÈÐH[[Y[ÜÈ0­È]Xðë[[ÜÈØ[\È]È0­ÈÛH[X[YÙ[È0­ÈÜ[]Û]ÜÙ]Z[ÏÜÙXÝ[ÛÙXÝ[ÛÛ\ÜÏHÙXÝ[ÛYH\Ù\X\È]Û\ÜÏHÙXÝ[ÛXY]]Û\ÜÏHÚXÚÙ\\Ù\X\È	ÛÛ^0íY\ÏÙ][péðíY\È]YHÙ[HX\Ý\È[\ÏÚ[H[Ü[XHÚ[\\ÈÛØH\ÈÛÛ^0íY\ÈXZ\È\Ý]0êYÚXØ\È[HÛÛÝpéðèÛËÜÙ]]Û\ÜÏHÛÝ[H[\ÏÙ]Ù]]Û\ÜÏH\\È]Û\ÜÏH\\]ÏÜ\ÈÛÝ^OÚÏÛX[ÛÛX[YYH0­È]Xðë[[ÜÏÜÛX[Ù]]ÛÛ^0èÛÏØPHÙ\péÛÜÈ\H]Xðë[[ÜËÜÙ]]°ìÞ[[È[Ý[Y[ÏØY[\\0êZ\ËYÜ\ÈH\Ý]0êYÚXKÜÙ]Ù]]Û\ÜÏH\\]ÏT^SZ[ÏÚÏÛX[XÛÛÙÚXH0­È]Xðë[[ÜÏÜÛX[Ù]]ÛÛ^0èÛÏØ[XÚ[Û[Y[ÈH[XØpéðíY\ÈÈÙ]ÜÜÙ]]°ìÞ[[È[Ý[Y[ÏØY[\ÜX]ÈH\Ù\XKÜÙ]Ù]]Û\ÜÏH\\]ÏÙ^\Y\Ü]Z]H0­ÈÚÏÛX[PH0­ÈÛÛY\ÚX[ÜÛX[Ù]]ÛÛ^0èÛÏØ\[Y[\ÈHZ[[Y[ÜÈHPKÜÙ]]°ìÞ[[È[Ý[Y[ÏØÜX[^\\Ù\XHH][X\Ø[[HPÒSKÜÙ]Ù]]Û\ÜÏH\\]ÏÝZ[\YHY[OÚÏÛX[\Ü]XYX\ÏÜÛX[Ù]]ÛÛ^0èÛÏØÜÜÚX[YYHHÙ]ÈÛYÈ[ÈÙ]ÜÜÙ]]°ìÞ[[È[Ý[Y[ÏØ\Ý]\\HÙ\KÜÙ]Ù]]Û\ÜÏH\\]Ï°âY\ÏÚÏÛX[ÛÛX[YYH0­ÈØpîOÜÛX[Ù]]ÛÛ^0èÛÏØÜÜðë][Ù]ÈHÈ\H0è\XHpêYXØKÜÙ]]°ìÞ[[È[Ý[Y[ÏØ[Y\ÜÜ[YYHHÜX]ËÜÙ]Ù]Ù]ÜÙXÝ[ÛÙXÝ[ÛÛ\ÜÏHÙXÝ[ÛYHÛÛÝZ[È]Û\ÜÏHÙXÝ[ÛXY]]Û\ÜÏHÚXÚÙ\È]YH\Ý[[ÜÈÛÛÝZ[ÏÙ]\[Y[\ÈHÙ]ÜÈ[H[Ý[Y[ÏÚ[XH\ðèÛÈ°è\YHÈ]YH\Ý0èHÙ[È\Ù[ÛYÈ8 %Ù[H[ÙÜX\È[ÜX]]È[HØÝ[Y[péðèÛÈHÚ]ËÜÙ]Ù]]Û\ÜÏHZ[[Ò\È]]Û\ÜÏHÚXÚÙ\XÛÜÜÚ\Ý[XHYÚ][Ù][H[\péÛÈY\[H\HØYH\ÈH^\pêÚXKÚÙ]X[ÛÛ\[KÛÛKØ\HÈ[Ý]XÚ[Û[È\Ø\H\XØpéðíY\ÎÈ[Ú[ÏØ\HØ\XÚ]péðèÛÎÈÜÜÝ\ÏØ\HÛÛY\ÚX[ÈXYÛ°ìÜÝXÛÏØ\H[YHHÜÜ[YY\ÎÈH\Ý]\\È]\Ý\È\H\[Y[\ÏØH°è\XHÈÛY[OØÚ]X
-È\Ù[ÜX[HH\ÙHHXXØpéðèÛËÜÙ]]Û\ÜÏHZ[\Ý\XÛHÛ\ÜÏHZ[]]Û\ÜÏHÚXÚÙ\PÙ\[ÚX[Ù]ÏX\Ý\ÚÜ[ÏÚÏ]YÜXH\H[YXØ\[°è[\Ù\ÈHÛY[\ËÚ\ËÝZX\ËÜ°êY]ÈHZ^\ËÜÜ[Û\ÜÏHZ[Ý]\È[H\Ù[Û[Y[ÏÜÜ[Ù]]Û\ÜÏHZ[\HÛY[OÙ]Ø\XÛO\XÛHÛ\ÜÏHZ[]]Û\ÜÏHÚXÚÙ\]YÜXHH[Ú[ÏÙ]Ï[Ú[ÈX[ÚÏÛÛpîÈH[\È\HÛY[\È[[\[HÛÛÙZ]ÜÈH\[Y[\È\ØY\ÈÜÈÚ]ÜËÜÜ[Û\ÜÏHZ[Ý]\È[H\Ù[Û[Y[ÏÜÜ[Ù]]Û\ÜÏHZ[\HÙ]ÈX[Ù]Ø\XÛO\XÛHÛ\ÜÏHZ[]]Û\ÜÏHÚXÚÙ\Ø[Ý[YÜHÛ[OÙ]ÏÔ\]Z\[Y[ÜÏÚÏ\[Y[HÛÛY\ÚX[\Hðè[Ý[ÈHXÚ\ðèÛÈH[\ËÜÜ[Û\ÜÏHZ[Ý]\È[H\Ù[Û[Y[ÏÜÜ[Ù]]Û\ÜÏHZ[\HÛY[OÙ]Ø\XÛO\XÛHÛ\ÜÏHZ[]]Û\ÜÏHÚXÚÙ\\[Y[H[\OÙ]ÏÔHX[ÚÏÜØ[^péðèÛÈHÛÛ]ÜËÜÜ[YY\Ë\Ý0ìÜXÛÈH°ìÞ[[ÜÈ\ÜÛÜËÜÜ[Û\ÜÏHZ[Ý]\È[H\ÛÈÈ]ÛpéðèÛÏÜÜ[Ù]]Û\ÜÏHZ[\H[\ÏÙ]Ø\XÛO\XÛHÛ\ÜÏHZ[]]Û\ÜÏHÚXÚÙ\]]ÛXpéðèÛÈ	[°è[\ÙOÙ]Ï\ÛÈ[ðèOÚÏXÝ\ÛÜÈYÚ]Z\È\H\ÚX\[°è[\Ù\È[[ÙZ\\ËXÚYXØpéðèÛÈH[]0ìÜ[ÜËÜÜ[Û\ÜÏHZ[Ý]\È[H\Ù[Û[Y[ÏÜÜ[Ù]]Û\ÜÏHZ[\HÛY[OÙ]Ø\XÛO\XÛHÛ\ÜÏHZ[]]Û\ÜÏHÚXÚÙ\\[Y[\ÈH\Ú[ÏÙ]ÏUÈYXðèXØOÚÏ\XØpéðíY\È\H\ÚX\\È[\ÈH[[ÙZ\ËÙpéðèÛÈHÙ\Ý0èÛËÜÜ[Û\ÜÏHZ[Ý]\È[H\Ù[Û[Y[ÏÜÜ[Ù]]Û\ÜÏHZ[\HÛY[OÙ]Ø\XÛOÙ]]Û\ÜÏHXÝ\ÝÛÏXÜ]0ìÜ[ÏÜÝÛÏ]ÐH[[Y[ÜÏØÝ0ìÝ\ÈHÜ[Ù\[ÚX[ÛÛHPËXÛÜ°êÚXHH^ÈHØZ^KÜÙ]]Y[[\ÏØ[[ÈÛÛY\ÚX[ÛÛHX]]péðèÛË\ÝÜ]YKÛÛ\\ÈH^ÈHØZ^HÚ[\\ËÜÙ]Ù]ÜÙXÝ[ÛÙXÝ[ÛÛ\ÜÏHÙXÝ[ÛYH[È]Û\ÜÏHÙXÝ[ÛXY]]Û\ÜÏHÚXÚÙ\X[Ü[ÏÙ]ÛÚ\Ø\È]YH\Ý0èÛÈ]Y[È[\[Y[OÚ]X[^péðíY\ÈÝ\\È]YHZY[HÈ[YHH[[\H]ÛpéðèÛÈH[\\ØKÜÙ]Ù]]Û\ÜÏH[ÚYH\XÛHÛ\ÜÏH[ÚYSXZ[]Û\ÜÏHÚXÚÙ\XØY[ZXH[\OÙ]Ï[XH[H°ìÜXH\HÜXpéðèÛÈH\]Z\OÚÏÛØ\[Ëpê]ÙË[YpéðèÛÈHYÜË^Ù[[[ÙZ\ËÙpéðèÛËÛÛY\ÚX[Ø\ÛÜÈHÚ[][péðíY\È\Ý0èÛÈÙ[ÈÜØ[^YÜÈÛÛ[È[XH\Ý]\HÛÛ0ë[XHH\Ù[Û[Y[ÈÈ[YKÜØ\XÛO]Û\ÜÏH[ÚYTÚYH\XÛHÛ\ÜÏH[ÚYSÝH]Û\ÜÏHÚXÚÙ\ÏÙ]ÏXÈ
-È]]ÛXpéðíY\È
-ÈPOÚÏYÛ^péðèÛÈÜÈÛÛÛ\ÈH\ØØHÜØ[ÈHØ\XÚYYHÜ\XÚ[Û[ÜØ\XÛO\XÛHÛ\ÜÏH[ÚYSÝH]Û\ÜÏHÚXÚÙ\Ù\Ý0èÛÈÈÛÛXÚ[Y[ÏÙ]ÏÛÛ^ÈY\ÝHHX[ÚÏ\ÙH\H[ÜÜ\ÛÛ^ËXÚ\ðíY\ÈHY°íY\È[HÚ]ÜÈH\[Y[\ÈHPKÜØ\XÛOÙ]Ù]ÜÙXÝ[ÛÙXÝ[ÛÛ\ÜÏHÙXÝ[ÛYHÞ[X\È]Û\ÜÏHÙXÝ[ÛXY]]Û\ÜÏHÚXÚÙ\°ìÞ[X\ÈÙ[X[\ÏÙ]È]YH[HXÛÛ\[\ÚÙ]]Û\ÜÏHÛÝ[HÛÜÏÙ]Ù]]Û\ÜÏH^ÙYZÜÈ\XÛHÛ\ÜÏH^[ÛOØÛØ\]ÜÈHÜÜÝKÜØ\XÛO\XÛHÛ\ÜÏH^ÝÜÈXÚ[Y[ÜÏØÜØ[^\YÙ[HHÚXÚË[ÙÜÈ]X]ÈÚ]ÜËÜØ\XÛO\XÛHÛ\ÜÏH^P]Xðë[[ÜÏØY[\\0êZ\ÈH\Ý]0êYÚXHÛÛHÜ\ÈÛÝ^KÜØ\XÛO\XÛHÛ\ÜÏH^[Ú[ÈX[Ø]ÛZ\\Ý]\KÛÛpîÜÈH^\pêÚXKÜØ\XÛO\XÛHÛ\ÜÏH^ÝÈÚ]OØ][°éØ\HÝH\Ù[°éØH[Ý]XÚ[Û[H\]Z]]\HYÚ][ÜØ\XÛOÙ]ÜÙXÝ[ÛÙXÝ[ÛÛ\ÜÏHÙXÝ[ÛYHY^[È]Û\ÜÏHÙXÝ[ÛXY]]Û\ÜÏHÚXÚÙ\\[^YÈHYpéðèÛÏÙ][XHÛÚ\ØH\H]\HÙ][XÏÚÙ]Ù]]Û\ÜÏHY]ÜX[]Û\ÜÏH\ÜÛÛ]Û\ÜÏHÚXÚÙ\\[^YÏÙ]ÝÛÏÛÛXÚ[Y[ÈÛÛYpéØHH\\[Y\Ý]\KÜÝÛÏÔH°ìÜ[ËÜÜÝ\ÈYÚ]Z\Ë[Ú[ÈX[PÈH\XØpéðíY\È[ÜÝ[H[H[Ý[Y[ÈÛÛ][N\]Z[È]YH[\È\[XHH\ÜÛØ\ÈHÚ]ÜÈÛÛYpéØHHØ[\ÜXHH\[Y[KØÙ\ÜÛÈHÙ]ËÜÙ]]Û\ÜÏHYXÝ[Û]Û\ÜÏHÚXÚÙ\\H[Ø\Ù]ØÚÜ][ÝO¸ '[XHØHÛÛpéðèÛÈ\ÛÛH[HØ[XK[HÛHÙ]È\ÛÛHÈY\Û[È\ÈHØ[XHXZ\ÈH[XH^¸ 'OØØÚÜ][ÝOÛ\ÜÏH]Y\Ý[Û]XZ\ÈÛÛXÚ[Y[ÜÈ]YHÚH\[[HH[XH\ÜÛØHÝHÚ]ÈÙ\X[H\\[XH\[Y[KØÙ\ÜÛÈÝHÙ]ÈHX[ÏÜÙ]Ù]ÜÙXÝ[ÛÙ]ÛXZ[]YHÛÛXÛ\ÜÏHY[Ý[OHÜÚ][Û^YÚ[Ù]ØXÚÙÜÝ[ÌÞZ[^MÙ\Ü^NÜYÜXÙKZ][\ÎÙ[\ÜY[Î]Ý[OHÚYZ[ML	JNØXÚÙÜÝ[ÙÜY[Î\]Ý[OH\Ü^N^Ú\ÝYKXÛÛ[ÜXÙKX]ÙY[Ø[YÛZ][\ÎÝ\]]Û\ÜÏHÚXÚÙ\ÛÛXZpéðèÛÏÙ][X\]X[^péðèÛÏÚÙ]]ÛÛÛXÚÏHÛÜÙPÛÛX][Û
-HÝ[OHÜ\ØXÚÙÜÝ[ÙYYÝÚYÍÚZYÚÍØÜ\\Y]\ÎL	NÙÛ\Ú^N°åÏØ]ÛÙ]]Ý[OH\Ü^NÜYÙØ\LÛX\Ú[]ÜN[]XÙZÛ\HÙ]HÛYHÝ[OHY[ÎLØÜ\\ÛÛYØØÙÙ[XÝÝ[OHY[ÎLØÜ\\ÛÛYØØÙÜ[ÛÝYYOÛÜ[ÛÜ[Û]\ÛÏÛÜ[ÛÜ[ÛØ\ÙHÈ[YØOÛÜ[ÛÜ[Û\[^YÏÛÜ[ÛÜÙ[XÝ^\XHXÙZÛ\HÈ]YHXÛÛXÙ]OÈÝ[OHY[ÎLØÜ\\ÛÛYØØÙÛZ[ZZYÚLÝ^\XO]ÛÛÛXÚÏHÛÜÙPÛÛX][Û
-HÝ[OH\ÝYK\Ù[[ØXÚÙÜÝ[\KXYJNØÛÛÜÙØÜ\ÜY[ÎLM\ÙÛ]ÙZYÚÌ[X\Ø]ÛÙ]Ù]Ù]ØÜ\[Ý[Û[ØÚÊ
-^ØÛÛÝYØÝ[Y[Ù][[Y[RY
-	Ü\ÜÝÛÜ	ÊKOYØÝ[Y[Ù][[Y[RY
-	Ù\ÊNÚY[YOOOIÛX[Ê^ÜÙ\ÜÚ[ÛÝÜYÙKÙ]][J	Ú[ÜX]]Ë]IË	ÌIÊNÙØÝ[Y[Ù][[Y[RY
-	ÛÙÚ[ÊKÛ\ÜÓ\ÝY
-	ÚY[ÊNÙØÝ[Y[Ù][[Y[RY
-	Ø\	ÊKÛ\ÜÓ\Ý[[ÝJ	ÚY[ÊNÜØÜÛÊ
-_Y[ÙHK^ÛÛ[IÔÙ[H[ÛÜ]K\ÝHÝ0ìÝ\Ë\ÙNX[ßB[Ý[ÛØÚÊ
-^ÜÙ\ÜÚ[ÛÝÜYÙK[[ÝR][J	Ú[ÜX]]Ë]IÊNÙØÝ[Y[Ù][[Y[RY
-	Ø\	ÊKÛ\ÜÓ\ÝY
-	ÚY[ÊNÙØÝ[Y[Ù][[Y[RY
-	ÛÙÚ[ÊKÛ\ÜÓ\Ý[[ÝJ	ÚY[Ê_B[Ý[Û[Z[
+<div id="app" class="hidden">
+<aside class="rail" id="rail"><div class="railInner">
+  <div class="brand"><div class="brandMini">L↗</div><div class="brandFull">LeanCo.↗</div></div>
+  <div class="editionMeta"><strong>Informativo Lean</strong><span>Setembro de 2026</span></div>
+  <nav class="railNav">
+    <div class="group">Início</div>
+    <a class="navLink" href="#inicio" data-label="Início" title="Início"><span class="ico">⌂</span><span class="navText">Início</span></a>
+    <a class="navLink" href="#mudou" data-label="O que mudou" title="O que mudou"><span class="ico">✦</span><span class="navText">O que mudou</span></a>
+    <div class="group">Acontecendo</div>
+    <a class="navLink" href="#novos" data-label="Novos clientes" title="Novos clientes"><span class="ico">✓</span><span class="navText">Novos clientes</span></a>
+    <a class="navLink" href="#novidades" data-label="Novidades da Lean" title="Novidades da Lean"><span class="ico">＋</span><span class="navText">Novidades da Lean</span></a>
+    <a class="navLink" href="#oportunidades" data-label="O que pode vir por aí" title="O que pode vir por aí"><span class="ico">↗</span><span class="navText">O que pode vir por aí</span></a>
+    <a class="navLink" href="#parcerias" data-label="Parcerias & conexões" title="Parcerias & conexões"><span class="ico">◇</span><span class="navText">Parcerias & conexões</span></a>
+    <div class="group">Construindo</div>
+    <a class="navLink" href="#construindo" data-label="O que estamos construindo" title="O que estamos construindo"><span class="ico">▦</span><span class="navText">O que estamos construindo</span></a>
+    <a class="navLink" href="#dentro" data-label="Lean por dentro" title="Lean por dentro"><span class="ico">◎</span><span class="navText">Lean por dentro</span></a>
+    <div class="group">Fechamento</div>
+    <a class="navLink" href="#proximas" data-label="Próximas semanas" title="Próximas semanas"><span class="ico">→</span><span class="navText">Próximas semanas</span></a>
+    <a class="navLink" href="#reflexao" data-label="Aprendizado" title="Aprendizado"><span class="ico">“</span><span class="navText">Aprendizado</span></a>
+  </nav>
+  <div class="railActions">
+    <button class="railBtn" onclick="openContribution()"><span class="ico">＋</span><span class="navText">Enviar atualização</span></button>
+    <button class="railBtn" onclick="location.href='../'"><span class="ico">≡</span><span class="navText">Edições anteriores</span></button>
+    <button class="railBtn" onclick="pinRail()"><span class="ico">◆</span><span class="navText" id="pinText">Fixar menu</span></button>
+    <button class="railBtn" onclick="lock()"><span class="ico">↪</span><span class="navText">Sair</span></button>
+  </div>
+</div></aside>
 
-^ØÛÛÝYØÝ[Y[Ù][[Y[RY
-	ÜZ[	ÊK[Y\Û\ÜÓ\ÝÙÙÛJ	Ü[Y	ÊNÙØÝ[Y[ÙKÛ\ÜÓ\ÝÙÙÛJ	ÜZ[[Y	Ë[Y
-NÙØÝ[Y[Ù][[Y[RY
-	Ü[^	ÊK^ÛÛ[\[YÉÑ\ØY^\Y[IÎÑ^\Y[IßB[Ý[ÛÜ[[Ø[J
-^ÙØÝ[Y[Ù][[Y[RY
-	Û[Ø[SÝ\^IÊKÛ\ÜÓ\ÝY
-	ÜÚÝÉÊ_B[Ý[ÛÛÜÙS[Ø[J
-^ÙØÝ[Y[Ù][[Y[RY
-	Û[Ø[SÝ\^IÊKÛ\ÜÓ\Ý[[ÝJ	ÜÚÝÉÊ_B[Ý[ÛÝ\^PÛÜÙJJ^ÚYK\Ù]YOOIÛ[Ø[SÝ\^IÊXÛÜÙS[Ø[J
-_B[Ý[ÛÜ[ÛÛX][Û
-^ÙØÝ[Y[Ù][[Y[RY
-	ØÛÛXÊKÛ\ÜÓ\Ý[[ÝJ	ÚY[Ê_B[Ý[ÛÛÜÙPÛÛX][Û
-^ÙØÝ[Y[Ù][[Y[RY
-	ØÛÛXÊKÛ\ÜÓ\ÝY
-	ÚY[Ê_BÚ[ÝËY][\Ý[\	ÑÓPÛÛ[ØYY	Ë
+<div class="mobileOverlay" id="mobileOverlay" onclick="overlayClose(event)"><div class="mobileDrawer"><div class="logoWhite">LeanCo.↗</div>
+<div class="mobileGroup">Início</div><a href="#inicio" onclick="closeMobile()">⌂ <span>Início</span></a><a href="#mudou" onclick="closeMobile()">✦ <span>O que mudou</span></a>
+<div class="mobileGroup">Acontecendo</div><a href="#novos" onclick="closeMobile()">✓ <span>Novos clientes</span></a><a href="#novidades" onclick="closeMobile()">＋ <span>Novidades da Lean</span></a><a href="#oportunidades" onclick="closeMobile()">↗ <span>O que pode vir por aí</span></a><a href="#parcerias" onclick="closeMobile()">◇ <span>Parcerias & conexões</span></a>
+<div class="mobileGroup">Construindo</div><a href="#construindo" onclick="closeMobile()">▦ <span>O que estamos construindo</span></a><a href="#dentro" onclick="closeMobile()">◎ <span>Lean por dentro</span></a>
+<div class="mobileGroup">Fechamento</div><a href="#proximas" onclick="closeMobile()">→ <span>Próximas semanas</span></a><a href="#reflexao" onclick="closeMobile()">“ <span>Aprendizado</span></a></div></div>
 
-OOÂYÙ\ÜÚ[ÛÝÜYÙKÙ]][J	Ú[ÜX]]Ë]IÊOOOIÌIÊ^ÙØÝ[Y[Ù][[Y[RY
-	ÛÙÚ[ÊKÛ\ÜÓ\ÝY
-	ÚY[ÊNÙØÝ[Y[Ù][[Y[RY
-	Ø\	ÊKÛ\ÜÓ\Ý[[ÝJ	ÚY[Ê_BØÝ[Y[Ù][[Y[RY
-	Ü\ÜÝÛÜ	ÊOËY][\Ý[\	ÚÙ^YÝÛËOOÚYKÙ^OOOIÑ[\Ê][ØÚÊ
-_JNÂÛÛÝ[ÜÏVËØÝ[Y[]Y\TÙ[XÝÜ[
-	Ë][ÉÊWKÝ\[YØÝ[Y[Ù][[Y[RY
-	ØÝ\[	ÊNÂÛÛÝØÏ[]È[\ÙXÝ[ÛØÙ\\[Y\ÏO[Y\ËÜXXÚ
-[OOÚY[K\Ò[\ÙXÝ[Ê^Û[ÜËÜXXÚ
-OOKÛ\ÜÓ\ÝÙÙÛJ	ØXÝ]IËKÙ]]X]J	ÚYÊOOOIÈÉÊÙ[K\Ù]Y
-JNØÛÛÝ][[ÜË[
-OOKÙ]]X]J	ÚYÊOOOIÈÉÊÙ[K\Ù]Y
-NÚY]	Ý\[
-XÝ\[^ÛÛ[Z]]\Ù]X[	Éß_JKÜÛÝX\Ú[ËLÉHMH	ßJNÂ[ÜËÜXXÚ
-OOØÛÛÝ[YØÝ[Y[]Y\TÙ[XÝÜKÙ]]X]J	ÚYÊJNÚY[
-[ØËØÙ\J[
-_JNÂÛÛÝ\YØÝ[Y[Ù][[Y[RY
-	Ø\ÊNØY][\Ý[\	ÜØÜÛ	Ë
+<main class="main">
+<header class="topbar"><button class="mobileMenu" onclick="openMobile()">☰</button><div class="topTitle">Informativo Lean · Setembro de 2026</div><div class="topCurrent" id="current">Início</div><div class="topSpacer"></div><a class="topLink" href="../">Edições anteriores</a><div class="progress"><i id="bar"></i></div></header>
+<div class="canvas">
 
-OOØÛÛÝYØÝ[Y[ØÝ[Y[[[Y[OYØÜÛZYÚYÛY[ZYÚØ\Ý[KÚYJOÓX]Z[LØÜÛÜÛJL
-N
-JÉÉIßKÜ\ÜÚ]NY_JNÂJNÂÜØÜ\Ù]ØÙOÚ[
+<section class="cover" id="inicio">
+  <div><div class="kicker">Setembro de 2026 · Atualizado em 29/09</div><h1>Mais clientes, novas ferramentas e uma Lean cada vez mais digital.</h1><p>Um resumo para se inteirar rapidamente sobre novos projetos, possíveis parcerias, ferramentas, movimentos comerciais e o que está mudando dentro da empresa.</p></div>
+  <aside class="coverAside"><div class="kicker">Em uma frase</div><h2>Setembro não foi só comercial.</h2><p>Além dos fechamentos, a Lean avançou na construção de ferramentas próprias, ensino, propostas digitais, HUBs e novos ambientes para clientes.</p></aside>
+</section>
+<div class="monthline"><b>Neste mês</b><i>•</i><span>4 novos contratos</span><i>•</i><span>21 negociações ativas</span><i>•</i><span>5 parcerias em estruturação</span><i>•</i><span>CRM próprio</span><i>•</i><span>Ensino Lean</span><i>•</i><span>6 projetos e protótipos digitais</span></div>
+
+<section class="section" id="mudou">
+  <div class="sectionHead"><div><div class="kicker">Desde a última edição</div><h2>O que mudou de verdade</h2><p>A leitura rápida para quem só quer se atualizar.</p></div></div>
+  <div class="changed">
+    <div class="changedItem"><div class="changedIcon">✓</div><div><b>MW Mecânica fechou</b><p>Novo projeto entrando em implantação.</p></div></div>
+    <div class="changedItem"><div class="changedIcon">✓</div><div><b>Laranjeiras Terraplanagem fechou</b><p>Mentoria confirmada.</p></div></div>
+    <div class="changedItem"><div class="changedIcon">✓</div><div><b>Impulso Imóveis entrou para a carteira</b><p>Mentoria + BPO.</p></div></div>
+    <div class="changedItem"><div class="changedIcon">✓</div><div><b>Real Lacto avançou para contratação</b><p>Projeto de quatro dias por mês.</p></div></div>
+    <div class="changedItem"><div class="changedIcon">+</div><div><b>CRM próprio evoluiu</b><p>Nova camada para organizar a rotina comercial da Lean.</p></div></div>
+    <div class="changedItem"><div class="changedIcon">+</div><div><b>Ensino Lean ganhou corpo</b><p>A plataforma de capacitação dos clientes continua evoluindo.</p></div></div>
+    <div class="changedItem"><div class="changedIcon">+</div><div><b>JGA e Bedin entraram como provas de conceito</b><p>Novas demonstrações de entrega em HTML.</p></div></div>
+    <div class="changedItem"><div class="changedIcon">+</div><div><b>O ecossistema digital ficou maior</b><p>Site, app, ensino, propostas, diagnóstico, ferramentas e área do cliente.</p></div></div>
+  </div>
+</section>
+
+<section class="section" id="novos">
+  <div class="sectionHead"><div><div class="kicker">Novos clientes & projetos</div><h2>O que entrou para a carteira</h2><p>O essencial para o time saber quem chegou e qual é a frente principal.</p></div><div class="count">4 fechamentos</div></div>
+  <div class="clients">
+    <article class="client"><small>Mentoria</small><h3>Real Lacto</h3><p>Dados, estratégia e financeiro.</p></article>
+    <article class="client"><small>Mentoria</small><h3>Laranjeiras Terraplanagem</h3><p>Estruturação gerencial.</p></article>
+    <article class="client"><small>Consultoria</small><h3>MW Mecânica</h3><p>Financeiro, produção e gestão.</p></article>
+    <article class="client"><small>Mentoria + BPO</small><h3>Impulso Imóveis</h3><p>Projeto combinado de gestão e operação financeira.</p></article>
+  </div>
+</section>
+
+<section class="section" id="novidades">
+  <div class="sectionHead"><div><div class="kicker">Novidades da Lean</div><h2>O que mudou na forma como estamos trabalhando</h2><p>Ferramentas e estruturas que ajudam a Lean a operar e entregar melhor.</p></div></div>
+  <article class="newsFeature">
+    <div class="newsVisual"><div class="kicker" style="color:#c7d9e3">Projeto em destaque</div><h3>Master Shopping</h3><p>Várias análises começam a deixar de viver separadas e passam a formar um único HUB gerencial.</p><div class="moduleCloud"><span>Faturamento</span><span>Crédito</span><span>Limite Extra</span><span>Faixas</span><span>Cliente 360</span><span>Lojas & Guias</span></div></div>
+    <div class="newsCopy"><div class="kicker">Por que isso importa</div><h3>Uma entrega que começa a parecer produto.</h3><p>O Master HUB é um bom exemplo de como uma necessidade específica do cliente pode virar uma plataforma organizada, evolutiva e potencialmente reaproveitável em outros contextos.</p></div>
+  </article>
+  <div class="newsGrid">
+    <article class="newsCard"><div class="kicker">Ferramenta interna</div><h3>CRM Lean</h3><p>A rotina comercial agora conta com uma ferramenta própria em Google Sheets + Apps Script, com interface e histórico comercial.</p><div class="flow"><span>Contato</span><i>→</i><span>Diagnóstico</span><i>→</i><span>Proposta</span><i>→</i><span>Próximo passo</span></div></article>
+    <article class="newsCard"><div class="kicker">Ensino Lean</div><h3>Plataforma para clientes</h3><p>O ensino.leancompany.com.br está evoluindo para concentrar conteúdos sobre gestão financeira, indicadores, processos, produção e uso das ferramentas dos projetos.</p><div class="flow"><span>Fundamentos</span><i>→</i><span>Gestão</span><i>→</i><span>Ferramentas</span></div></article>
+    <article class="newsCard"><div class="kicker">Presença digital</div><h3>Novo site + novos ambientes</h3><p>O site institucional está sendo reconstruído e a arquitetura digital começa a separar app, ensino, propostas, diagnóstico, ferramentas e área do cliente.</p></article>
+  </div>
+</section>
+
+<section class="section" id="oportunidades">
+  <div class="sectionHead"><div><div class="kicker">O que pode vir por aí</div><h2>Negociações que vale a equipe conhecer</h2><p>Não é uma cópia do CRM. São apenas as conversas com contexto mais relevante neste momento.</p></div></div>
+  <div class="opportunities">
+    <article class="opMain"><div class="kicker">Negociação em destaque</div><h3>Kietec | Danone</h3><p>Proposta apresentada para mapeamento de processos do RH da Danone, com cerca de 60 pessoas.</p><div class="opNow"><b>Agora</b><p>Aguardando retorno sobre a proposta apresentada.</p></div></article>
+    <div class="opList">
+      <article class="op"><div class="opTop"><h3>Incopostes</h3><span>Proposta enviada</span></div><p>Treinamento Lean em avaliação pela diretoria.</p></article>
+      <article class="op"><div class="opTop"><h3>FF Law</h3><span>Diagnóstico</span></div><p>Nova conversa envolvendo Mentoria + BPO.</p></article>
+      <article class="op"><div class="opTop"><h3>MB Esquadrias</h3><span>Proposta enviada</span></div><p>Projeto de produção com potencial de recorrência.</p></article>
+      <article class="op"><div class="opTop"><h3>Dias Auto Posto</h3><span>Proposta enviada</span></div><p>Mentoria para a operação.</p></article>
+    </div>
+  </div>
+  <details class="more"><summary>+ Ver outras 16 oportunidades em acompanhamento</summary><p>Apisnutri · Lactopar · Solucon · Torrezan · Excellence BPO · DColor · Voltolini Consultoria · Fundição Carajás · Josué Vieira · LCL · RL Sistemas · Uniproof · JGA Alimentos · Laticínios Campo Vivo · Bolha Embalagens · Granitolit.</p></details>
+</section>
+
+<section class="section" id="parcerias">
+  <div class="sectionHead"><div><div class="kicker">Parcerias & conexões</div><h2>Relações que podem abrir novas frentes</h2><p>Um panorama simples sobre as conexões mais estratégicas em construção.</p></div><div class="count">5 frentes</div></div>
+  <div class="partners">
+    <div class="partner"><div><h3>Grupo Souza</h3><small>Contabilidade · Laticínios</small></div><div><b>Conexão</b><p>HUB de serviços para laticínios.</p></div><div><b>Próximo movimento</b><p>Definir papéis, regras e estratégia.</p></div></div>
+    <div class="partner"><div><h3>ERP MyMilk</h3><small>Tecnologia · Laticínios</small></div><div><b>Conexão</b><p>Relacionamento e indicações no setor.</p></div><div><b>Próximo movimento</b><p>Definir formato da parceria.</p></div></div>
+    <div class="partner"><div><h3>Cezar Mesquita · FX</h3><small>IA · Comercial</small></div><div><b>Conexão</b><p>Ferramentas e treinamentos de IA.</p></div><div><b>Próximo movimento</b><p>Formalizar parceria e avaliar canal na ACIM.</p></div></div>
+    <div class="partner"><div><h3>Guilherme Defende</h3><small>Esquadrias</small></div><div><b>Conexão</b><p>Possibilidade de produto voltado ao setor.</p></div><div><b>Próximo movimento</b><p>Estruturar a oferta.</p></div></div>
+    <div class="partner"><div><h3>Édipo</h3><small>Contabilidade · Saúde</small></div><div><b>Conexão</b><p>Possível produto de BPO para área médica.</p></div><div><b>Próximo movimento</b><p>Validar oportunidade e formato.</p></div></div>
+  </div>
+</section>
+
+<section class="section" id="construindo">
+  <div class="sectionHead"><div><div class="kicker">O que estamos construindo</div><h2>Ferramentas e produtos em movimento</h2><p>Uma visão rápida do que está sendo desenvolvido — sem transformar o Informativo em documentação de projeto.</p></div></div>
+  <div class="buildingHero"><div><div class="kicker">Ecossistema digital</div><h2>Um endereço diferente para cada tipo de experiência.</h2></div><p><b>leancompany.com.br</b> para o institucional; <b>app</b> para aplicações; <b>ensino</b> para capacitação; <b>propostas</b> para comercial; <b>diagnóstico</b> para entrada de oportunidades; e estruturas previstas para <b>ferramentas</b> e <b>área do cliente</b>. GitHub + Vercel formam a base de publicação.</p></div>
+  <div class="buildList">
+    <article class="build"><div><div class="kicker">HUB gerencial</div><h3>Master Shopping</h3><p>Plataforma para unificar análises de clientes, lojas, guias, crédito e faixas.</p><span class="buildStatus">Em desenvolvimento</span></div><div class="buildType">Cliente</div></article>
+    <article class="build"><div><div class="kicker">Plataforma de ensino</div><h3>Ensino Lean</h3><p>Conteúdo e trilhas para clientes entenderem conceitos e ferramentas usadas nos projetos.</p><span class="buildStatus">Em desenvolvimento</span></div><div class="buildType">Produto Lean</div></article>
+    <article class="build"><div><div class="kicker">Calculadora online</div><h3>SR Equipamentos</h3><p>Ferramenta comercial para cálculo e decisão de vendas.</p><span class="buildStatus">Em desenvolvimento</span></div><div class="buildType">Cliente</div></article>
+    <article class="build"><div><div class="kicker">Ferramenta interna</div><h3>CRM Lean</h3><p>Organização de contatos, oportunidades, histórico e próximos passos.</p><span class="buildStatus">Em uso / evolução</span></div><div class="buildType">Interno</div></article>
+    <article class="build"><div><div class="kicker">Automação & análise</div><h3>Arco Ingá</h3><p>Recursos digitais para apoiar análises financeiras, precificação e relatórios.</p><span class="buildStatus">Em desenvolvimento</span></div><div class="buildType">Cliente</div></article>
+    <article class="build"><div><div class="kicker">Ferramentas de apoio</div><h3>MW Mecânica</h3><p>Aplicações para apoiar as frentes de financeiro, produção e gestão.</p><span class="buildStatus">Em desenvolvimento</span></div><div class="buildType">Cliente</div></article>
+  </div>
+  <div class="labStrip"><strong>Laboratório</strong><div><b>JGA Alimentos</b><p>Protótipo de portal gerencial com ABC, recorrência e fluxo de caixa.</p></div><div><b>Bedin Tintas</b><p>Demo comercial com reativação, estoque, compras e fluxo de caixa simples.</p></div></div>
+</section>
+
+<section class="section" id="dentro">
+  <div class="sectionHead"><div><div class="kicker">Lean por dentro</div><h2>Coisas que estão mudando internamente</h2><p>Atualizações curtas que ajudam o time a entender a evolução da empresa.</p></div></div>
+  <div class="inside">
+    <article class="insideMain"><div class="kicker">Academia interna</div><h3>Uma trilha própria para formação da equipe</h3><p>Onboarding, método, validação de dados, Excel, financeiro, produção, comercial, casos e simulações estão sendo organizados como uma estrutura contínua de desenvolvimento do time.</p></article>
+    <div class="insideSide"><article class="insideNote"><div class="kicker">BPO</div><h3>Nibo + automações + IA</h3><p>Padronização dos controles e busca por ganho de capacidade operacional.</p></article><article class="insideNote"><div class="kicker">Gestão do conhecimento</div><h3>Contexto Mestre da Lean</h3><p>Base para transportar contexto, decisões e padrões entre projetos e ferramentas de IA.</p></article></div>
+  </div>
+</section>
+
+<section class="section" id="proximas">
+  <div class="sectionHead"><div><div class="kicker">Próximas semanas</div><h2>O que vale acompanhar</h2></div><div class="count">5 pontos</div></div>
+  <div class="nextWeeks"><article class="next"><b>Danone</b><p>Cobrar retorno da proposta.</p></article><article class="next"><b>Novos fechamentos</b><p>Organizar agenda e kick-off dos quatro projetos.</p></article><article class="next"><b>HUB Laticínios</b><p>Definir papéis e estratégia com Grupo Souza.</p></article><article class="next"><b>Ensino Lean</b><p>Evoluir estrutura, conteúdos e experiência.</p></article><article class="next"><b>Novo site</b><p>Avançar a nova presença institucional e arquitetura digital.</p></article></div>
+</section>
+
+<section class="section" id="reflexao">
+  <div class="sectionHead"><div><div class="kicker">Aprendizado da edição</div><h2>Uma coisa para levar de setembro</h2></div></div>
+  <div class="editorial"><div class="lesson"><div class="kicker">Aprendizado</div><strong>Conhecimento começa a virar infraestrutura.</strong><p>CRM próprio, propostas digitais, Ensino Lean, HUBs e aplicações mostram um movimento comum: aquilo que antes dependia de pessoas e projetos começa a ganhar forma de ferramenta, processo e produto.</p></div><div class="reflection"><div class="kicker">Para pensar</div><blockquote>“Uma boa solução resolve um problema. Um bom produto resolve o mesmo tipo de problema mais de uma vez.”</blockquote><p class="question">Quais conhecimentos que hoje dependem de uma pessoa ou projeto poderiam virar uma ferramenta, processo ou produto da Lean?</p></div></div>
+</section>
+</div>
+</main>
+
+<div id="contrib" class="hidden" style="position:fixed;inset:0;background:#0008;z-index:140;display:grid;place-items:center;padding:20px"><div style="width:min(560px,100%);background:#fff;padding:25px"><div style="display:flex;justify-content:space-between;align-items:start"><div><div class="kicker">Contribuição</div><h2>Enviar atualização</h2></div><button onclick="closeContribution()" style="border:0;background:#eef2f4;width:34px;height:34px;border-radius:50%;font-size:20px">×</button></div><div style="display:grid;gap:10px;margin-top:18px"><input placeholder="Seu nome" style="padding:10px;border:1px solid #ccd4d8"><select style="padding:10px;border:1px solid #ccd4d8"><option>Novidade</option><option>Aviso</option><option>Case / Entrega</option><option>Aprendizado</option></select><textarea placeholder="O que aconteceu?" style="padding:10px;border:1px solid #ccd4d8;min-height:100px"></textarea><button onclick="closeContribution()" style="justify-self:end;background:var(--blue);color:#fff;border:0;padding:10px 15px;font-weight:700">Enviar</button></div></div></div>
+
+<script>
+function unlock(){const p=document.getElementById('password'),e=document.getElementById('err');if(p.value==='lean'){sessionStorage.setItem('informativo-v9','1');document.getElementById('login').classList.add('hidden');document.getElementById('app').classList.remove('hidden');scrollTo(0,0)}else e.textContent='Senha incorreta. Neste protótipo, use: lean'}
+function lock(){sessionStorage.removeItem('informativo-v9');document.getElementById('app').classList.add('hidden');document.getElementById('login').classList.remove('hidden')}
+function pinRail(){const r=document.getElementById('rail'),pinned=r.classList.toggle('pinned');document.body.classList.toggle('railPinned',pinned);document.getElementById('pinText').textContent=pinned?'Desafixar menu':'Fixar menu'}
+function openMobile(){document.getElementById('mobileOverlay').classList.add('show')}function closeMobile(){document.getElementById('mobileOverlay').classList.remove('show')}function overlayClose(e){if(e.target.id==='mobileOverlay')closeMobile()}
+function openContribution(){document.getElementById('contrib').classList.remove('hidden')}function closeContribution(){document.getElementById('contrib').classList.add('hidden')}
+window.addEventListener('DOMContentLoaded',()=>{if(sessionStorage.getItem('informativo-v9')==='1'){document.getElementById('login').classList.add('hidden');document.getElementById('app').classList.remove('hidden')}document.getElementById('password')?.addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});const links=[...document.querySelectorAll('.navLink')],current=document.getElementById('current');const obs=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));const hit=links.find(a=>a.getAttribute('href')==='#'+entry.target.id);if(hit&&current)current.textContent=hit.dataset.label||''}}),{rootMargin:'-27% 0px -66% 0px'});links.forEach(a=>{const el=document.querySelector(a.getAttribute('href'));if(el)obs.observe(el)});const bar=document.getElementById('bar');addEventListener('scroll',()=>{const d=document.documentElement,m=d.scrollHeight-d.clientHeight;bar.style.width=(m?Math.min(100,d.scrollTop/m*100):0)+'%'},{passive:true})});
+</script>
+</div>
+</body>
+</html>
