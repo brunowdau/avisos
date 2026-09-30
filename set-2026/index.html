@@ -80,6 +80,55 @@ section[id]{scroll-margin-top:74px}
 .notice{background:#edf2f4;border-left:4px solid var(--blue);padding:15px 17px}.notice ul{margin:7px 0 0 18px;padding:0}.notice li{font-size:11.7px;color:#566169;margin:4px 0}
 .nextList{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}.nextItem{background:#fff;border-top:3px solid var(--blue);padding:13px;min-height:100px}.nextItem b{display:block;font-size:13px;margin-bottom:3px}.nextItem p{font-size:11px;color:#657078}
 
+
+/* V11 — acabamento visual e orientação operacional */
+.canvas{width:min(var(--max),calc(100% - 56px))}
+.sectionHead{margin-bottom:16px}
+.sectionHead h2{max-width:900px}
+.sectionHead p{max-width:78ch}
+.cover{box-shadow:0 1px 0 #dde4e7}
+.metrics{box-shadow:0 1px 0 #cad5db}
+.proposalToolbar{background:var(--bg);padding:2px 0 10px}
+.proposalTable tbody tr:hover{background:#fafbfb}
+.simpleCard,.projectCard,.internalCard,.exitCard{box-shadow:0 1px 0 #dfe4e7}
+.partners{background:#fff;border-top:0;border-radius:8px;overflow:hidden;box-shadow:0 1px 0 #d9e0e4}
+.partnerRow{grid-template-columns:1.05fr .95fr 1fr;gap:22px;padding:17px 18px;border-bottom:1px solid var(--line)}
+.partnerRow:first-child{border-top:3px solid var(--blue)}
+.partnerRow:last-child{border-bottom:0}
+.partnerRow:hover{background:#fafbfb}
+.partnerRow h3{font-size:17.5px}
+.partnerRow p{line-height:1.48}
+.newsList{border-radius:8px;overflow:hidden;box-shadow:0 1px 0 #dfe4e7}
+.newsRow{grid-template-columns:170px 1fr;gap:22px;padding:16px 18px}
+.newsRow:first-child{border-top:3px solid var(--blue)}
+.newsRow b{padding-top:2px}
+.newsRow h3{font-size:17.5px}
+.publishGuide{margin-top:16px;background:var(--navy);color:#fff;border-radius:10px;padding:24px 25px 22px}
+.publishGuide .eyebrow{color:#cbdce5}
+.publishGuideTop{display:grid;grid-template-columns:.72fr 1.28fr;gap:26px;align-items:end;padding-bottom:18px;border-bottom:1px solid #ffffff25}
+.publishGuideTop h3{font-size:27px;line-height:1.16;margin-top:5px}
+.publishGuideTop p{color:#d7e2e8;font-size:12.5px;max-width:72ch}
+.publishSteps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ffffff24;margin-top:18px}
+.publishStep{background:var(--navy);padding:15px 16px 16px;min-height:145px}
+.stepNo{font-family:Georgia,serif;font-size:21px;color:#9db6c5;margin-bottom:7px}
+.publishStep b{display:block;font-size:13px;margin-bottom:5px}
+.publishStep p{font-size:11.2px;line-height:1.5;color:#d6e1e7}
+.codeLine{display:block;margin-top:7px;padding:6px 8px;background:#ffffff0d;border:1px solid #ffffff24;font-family:Consolas,"Courier New",monospace;font-size:10.3px;color:#fff;word-break:break-all}
+.publishRules{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.ruleCard{border:1px solid #ffffff23;padding:12px 13px}
+.ruleCard b{display:block;font-size:11px;margin-bottom:4px}
+.ruleCard p{color:#cbd9e1;font-size:10.8px}
+.notice{border-radius:0 8px 8px 0;box-shadow:0 1px 0 #dde4e7}
+.notice li{line-height:1.52}
+.changesSince{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.changeSince{background:#fff;padding:14px 15px;border-left:3px solid var(--blue);box-shadow:0 1px 0 #dfe4e7}
+.changeSince b{display:block;font-size:13.5px;margin-bottom:3px}
+.changeSince p{font-size:11.4px;color:#606b72;line-height:1.47}
+@media(min-width:1600px){:root{--max:1240px}}
+@media(max-width:1050px){.publishSteps{grid-template-columns:1fr 1fr}}
+@media(max-width:980px){.publishGuideTop{grid-template-columns:1fr}}
+@media(max-width:700px){.canvas{width:min(100% - 28px,var(--max))}.publishSteps,.publishRules,.changesSince{grid-template-columns:1fr}.partnerRow,.newsRow{padding:15px}}
+
 /* modal/mobile */
 .mobileOverlay{display:none}
 @media(max-width:1050px){.metrics{grid-template-columns:repeat(3,1fr)}.metric{border-bottom:1px solid #ffffff2a}.cardGrid,.projectGrid{grid-template-columns:1fr 1fr}.proposalDetailed{grid-template-columns:1fr}.nextList{grid-template-columns:repeat(3,1fr)}}
@@ -106,7 +155,7 @@ section[id]{scroll-margin-top:74px}
 <main class="main"><header class="topbar"><button class="mobileMenu" onclick="openMobile()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><div class="topTitle">Informativo Lean · Setembro de 2026</div><div class="topCurrent" id="current">Visão geral</div><div class="topSpacer"></div><a class="topLink" href="../">Edições anteriores</a><div class="progress"><i id="bar"></i></div></header>
 <div class="canvas">
 
-<section class="cover" id="visao"><div><div class="eyebrow">Setembro de 2026 · Atualizado em 30/09</div><h1>Tudo o que importa, separado por assunto.</h1><p class="coverLead">Propostas em aberto, fechamentos, negociações perdidas, clientes que saíram, parcerias, projetos, ferramentas, novidades e avisos — cada informação concentrada em um único lugar.</p></div><aside class="coverSide"><div class="eyebrow">Como ler</div><h2>Comece pelo resumo. Aprofunde só o que interessar.</h2><p>A área comercial abre em visão resumida e pode ser alternada para a versão detalhada com histórico e próximo passo.</p></aside></section>
+<section class="cover" id="visao"><div><div class="eyebrow">Setembro de 2026 · Atualizado em 30/09</div><h1>Tudo o que importa, separado por assunto.</h1><p class="coverLead">Propostas em aberto, fechamentos, negociações perdidas, clientes que saíram, parcerias, projetos, ferramentas, novidades, orientações e avisos — cada informação concentrada em um único lugar.</p></div><aside class="coverSide"><div class="eyebrow">Como ler</div><h2>Comece pelo resumo. Aprofunde só o que interessar.</h2><p>A área comercial abre em visão resumida e pode ser alternada para a versão detalhada com histórico e próximo passo.</p></aside></section>
 <div class="metrics"><div class="metric"><b>23</b><span>negociações abertas</span></div><div class="metric"><b>03</b><span>fechamentos</span></div><div class="metric"><b>03</b><span>negociações não fechadas</span></div><div class="metric"><b>05</b><span>parcerias em estruturação</span></div><div class="metric"><b>06+</b><span>projetos e ferramentas em evolução</span></div></div>
 
 <section class="section" id="propostas"><div class="sectionHead"><div><div class="eyebrow">Comercial</div><h2>Propostas e negociações em aberto</h2><p>Todas as oportunidades ativas estão aqui. Alterne entre a leitura resumida e a detalhada, ou filtre por estágio.</p></div><div class="count">23 abertas</div></div>
@@ -256,14 +305,48 @@ section[id]{scroll-margin-top:74px}
 <article class="internalCard"><div class="eyebrow">Organização</div><h3>Notion / Central interna</h3><p>Documentação, organização de processos e centralização de informações da Lean.</p></article>
 </div></section>
 
-<section class="section" id="novidades"><div class="sectionHead"><div><div class="eyebrow">Novidades</div><h2>Outras mudanças importantes</h2><p>Informações que não pertencem ao comercial, aos projetos de clientes ou às ferramentas internas.</p></div></div><div class="newsList">
+<section class="section" id="novidades">
+<div class="sectionHead"><div><div class="eyebrow">Novidades</div><h2>Mudanças importantes e novos padrões</h2><p>Além de comunicar o que mudou, esta área também registra orientações práticas que a equipe deve seguir.</p></div></div>
+<div class="newsList">
 <div class="newsRow"><b>Novo site</b><div><h3>leancompany.com.br está sendo reconstruído</h3><p>Nova estrutura institucional alinhada ao ICP e ao posicionamento atual da Lean.</p></div></div>
-<div class="newsRow"><b>Domínios</b><div><h3>O ecossistema digital está sendo separado por função</h3><p>app.leancompany.com.br, ensino.leancompany.com.br, propostas.leancompany.com.br e diagnostico.leancompany.com.br já fazem parte da arquitetura; ferramentas.leancompany.com.br e cliente.leancompany.com.br estão previstos para etapas futuras.</p></div></div>
 <div class="newsRow"><b>Comercial</b><div><h3>Propostas comerciais em formato HTML</h3><p>Microsites personalizados passam a ser usados como uma nova forma de apresentar diagnóstico, solução e impacto ao cliente.</p></div></div>
-<div class="newsRow"><b>Infraestrutura</b><div><h3>GitHub + Vercel como base de publicação</h3><p>Versionamento, histórico e deploy passam a fazer parte do padrão das novas ferramentas e páginas.</p></div></div>
-</div></section>
+<div class="newsRow"><b>Infraestrutura</b><div><h3>GitHub + Vercel passam a fazer parte do padrão de publicação</h3><p>Versionamento, histórico e deploy automático devem fazer parte das novas ferramentas e páginas desenvolvidas pela equipe.</p></div></div>
+</div>
+<div class="publishGuide">
+<div class="publishGuideTop"><div><div class="eyebrow">Novo padrão da equipe</div><h3>Como publicar uma nova ferramenta de cliente</h3></div><p>Para manter os projetos organizados e facilitar manutenção, histórico e acesso dos clientes, as novas ferramentas devem seguir um padrão único de publicação.</p></div>
+<div class="publishSteps">
+<div class="publishStep"><div class="stepNo">01</div><b>Use a conta institucional</b><p>GitHub e Vercel devem ser acessados pela conta institucional de suporte da Lean, evitando projetos presos a contas pessoais.</p><span class="codeLine">suporte@leancompany.com.br</span></div>
+<div class="publishStep"><div class="stepNo">02</div><b>Publique no repositório app</b><p>Projetos destinados a clientes devem ser concentrados no repositório <strong>app</strong> do GitHub da Lean.</p><span class="codeLine">GitHub → repositório: app</span></div>
+<div class="publishStep"><div class="stepNo">03</div><b>Crie uma pasta para o cliente</b><p>Cada cliente deve ter sua própria pasta. Use um nome curto, em minúsculas e sem espaços ou acentos.</p><span class="codeLine">/master-shopping/ · /mw-mecanica/</span></div>
+<div class="publishStep"><div class="stepNo">04</div><b>Deixe o Vercel publicar</b><p>O repositório está conectado ao Vercel. Ao atualizar a pasta no GitHub, a nova versão deve seguir para publicação automaticamente.</p><span class="codeLine">GitHub → Vercel</span></div>
+<div class="publishStep"><div class="stepNo">05</div><b>Use o endereço padrão</b><p>O nome da pasta vira o caminho final após o domínio do APP.</p><span class="codeLine">app.leancompany.com.br/&lt;cliente&gt;/</span></div>
+<div class="publishStep"><div class="stepNo">06</div><b>Compartilhe com a equipe</b><p>Depois da publicação, envie a ferramenta no grupo da equipe para que todos saibam o que está sendo desenvolvido na Lean.</p><span class="codeLine">Cliente + objetivo + link + principal novidade</span></div>
+</div>
+<div class="publishRules">
+<div class="ruleCard"><b>Ao criar uma nova versão</b><p>Atualize a mesma pasta do cliente e preserve o histórico pelo GitHub. Evite criar repositórios e endereços paralelos sem necessidade.</p></div>
+<div class="ruleCard"><b>Ao compartilhar no grupo</b><p>Informe em uma mensagem curta: qual cliente, o que a ferramenta faz, o que foi criado ou alterado e o link para visualização.</p></div>
+</div>
+</div>
+</section>
 
-<section class="section" id="avisos"><div class="sectionHead"><div><div class="eyebrow">Avisos</div><h2>Lembretes para a equipe</h2></div></div><div class="notice"><ul><li>O CRM é a fonte oficial dos detalhes comerciais; o Informativo é a visão consolidada para a equipe.</li><li>Atualizações relevantes de clientes, ferramentas e projetos podem ser enviadas para entrar nas próximas edições.</li><li>Quando houver prints reais das novas ferramentas, eles podem substituir os placeholders e descrições do Informativo.</li></ul></div></section>
+<section class="section" id="avisos"><div class="sectionHead"><div><div class="eyebrow">Avisos</div><h2>Lembretes para a equipe</h2></div></div><div class="notice"><ul>
+<li><b>CRM:</b> continua sendo a fonte oficial dos detalhes comerciais; o Informativo concentra a visão geral para a equipe.</li>
+<li><b>Novas ferramentas:</b> sempre que uma ferramenta, dashboard, calculadora ou automação nova for desenvolvida, compartilhe no grupo da equipe para conhecimento de todos.</li>
+<li><b>Publicação:</b> projetos de clientes devem seguir o novo padrão GitHub → repositório <b>app</b> → pasta do cliente → Vercel → <b>app.leancompany.com.br/&lt;cliente&gt;/</b>.</li>
+<li><b>Próximas edições:</b> cases, aprendizados, mudanças de processo e ferramentas relevantes podem ser enviados pelo botão “Enviar atualização”.</li>
+</ul></div></section>
+
+<section class="section" id="mudancas">
+<div class="sectionHead"><div><div class="eyebrow">Desde o último informativo</div><h2>Mudanças desde a edição anterior</h2><p>Um resumo curto do que efetivamente mudou desde o último fechamento do Informativo.</p></div><div class="count">6 mudanças</div></div>
+<div class="changesSince">
+<div class="changeSince"><b>3 novos fechamentos</b><p>Laranjeiras Terraplanagem, MW Mecânica e Impulso Imóveis passaram para a carteira.</p></div>
+<div class="changeSince"><b>Real Lacto voltou para “Pausado”</b><p>O projeto chegou a fechar, mas o início foi postergado; hoje a negociação permanece em acompanhamento.</p></div>
+<div class="changeSince"><b>CRM Lean evoluiu para a V2.2</b><p>A operação comercial ganhou uma ferramenta interna mais estruturada para histórico, estágios e próximos passos.</p></div>
+<div class="changeSince"><b>Ensino Lean avançou</b><p>A plataforma para clientes ganhou mais estrutura, conteúdos e organização das trilhas.</p></div>
+<div class="changeSince"><b>Mais ferramentas digitais em desenvolvimento</b><p>Master Shopping, Arco Ingá, MW Mecânica, SR Equipamentos e novas provas de conceito ampliaram a frente digital.</p></div>
+<div class="changeSince"><b>Novo padrão de publicação</b><p>Projetos de clientes passam a seguir conta institucional → GitHub/app → pasta do cliente → Vercel → app.leancompany.com.br/&lt;cliente&gt;/.</p></div>
+</div>
+</section>
 
 <section class="section" id="proximos"><div class="sectionHead"><div><div class="eyebrow">Próximos movimentos</div><h2>O que merece acompanhamento agora</h2></div><div class="count">5 prioridades</div></div><div class="nextList">
 <article class="nextItem"><b>Danone</b><p>Cobrar retorno da proposta apresentada.</p></article><article class="nextItem"><b>Novos fechamentos</b><p>Organizar início de Laranjeiras, MW e Impulso.</p></article><article class="nextItem"><b>HUB Laticínios</b><p>Definir formato com Grupo Souza.</p></article><article class="nextItem"><b>Ensino Lean</b><p>Evoluir estrutura e conteúdos.</p></article><article class="nextItem"><b>Novo site</b><p>Avançar a nova arquitetura institucional.</p></article>
