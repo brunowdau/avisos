@@ -1,0 +1,391 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Informativo Lean · Setembro 2026</title><style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+ --blue:#345574;--navy:#233a4e;--ink:#22292f;--muted:#677279;--line:#dce2e5;--bg:#f4f6f7;--paper:#fff;--soft:#edf2f4;--warm:#f2ede5;
+ --green:#3d7359;--greenSoft:#e8f2ec;--amber:#946f2d;--amberSoft:#f5eee2;--rose:#8d5864;--roseSoft:#f3e9ec;
+ --rail:56px;--railOpen:232px;--top:54px;--max:1240px;
+}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Arial,Helvetica,sans-serif;font-size:14px;line-height:1.58;overflow-x:hidden}
+a{color:inherit}button,input,select,textarea,summary{font:inherit}
+button,summary{cursor:pointer}
+h1,h2,h3{margin:0;letter-spacing:-.018em}
+h1{font-size:clamp(40px,4.2vw,52px);line-height:1.05;font-weight:720}
+h2{font-size:clamp(27px,2.5vw,34px);line-height:1.12;font-weight:680}
+h3{font-size:19px;line-height:1.28;font-weight:670}
+p{margin:0}
+.hidden{display:none!important}
+section[id]{scroll-margin-top:74px}
+.eyebrow{font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:750;color:var(--blue)}
+
+ .loginLogo{font-size:32px;font-weight:800;color:var(--blue);letter-spacing:-.04em;margin-bottom:26px}.brandMark{display:grid;place-items:center;background:#fff;color:var(--blue);font-weight:900;border-radius:9px;font-size:18px}.brandWord{font-size:24px;font-weight:800;letter-spacing:-.05em;color:#fff}.mobileLogo{font-size:26px;font-weight:800;letter-spacing:-.04em;margin-bottom:18px}
+/* login */
+.login{min-height:100vh;display:grid;place-items:center;background:var(--blue);padding:24px}
+.loginCard{width:min(500px,100%);background:#fff;border-radius:12px;padding:36px;box-shadow:0 24px 65px #10243145}
+.loginCard img{width:205px;max-width:72%;margin-bottom:26px}
+.loginCard h1{font-size:39px;margin:7px 0 8px}.loginCard>p{color:var(--muted);margin-bottom:22px}
+.loginCard label{display:block;font-size:12px;font-weight:650;margin-bottom:6px}
+.loginRow{display:flex;gap:8px}.loginRow input{flex:1;border:1px solid #cad2d6;border-radius:7px;padding:12px}.loginRow button{border:0;border-radius:7px;background:var(--blue);color:#fff;padding:0 18px;font-weight:700}
+.err{min-height:17px;color:#914444;font-size:12px;margin-top:5px}.loginCard small{display:block;color:#7b858a;margin-top:8px}
+
+/* menu */
+.rail{position:fixed;inset:0 auto 0 0;width:var(--rail);background:var(--blue);color:#fff;z-index:90;overflow:hidden;transition:width .18s ease,box-shadow .18s ease}
+.rail:hover,.rail.pinned,.rail:focus-within{width:var(--railOpen);box-shadow:14px 0 34px #14293638}
+.railInner{width:var(--railOpen);height:100%;display:flex;flex-direction:column;padding:12px 8px 10px}
+.brand{height:44px;position:relative;margin-bottom:6px}.brandSymbol{position:absolute;left:3px;top:4px;width:34px;height:34px;object-fit:contain;transition:.13s}.brandFull{position:absolute;left:4px;top:3px;width:155px;max-height:38px;object-fit:contain;object-position:left center;opacity:0;transform:translateX(7px);transition:.15s;pointer-events:none}
+.rail:hover .brandSymbol,.rail.pinned .brandSymbol,.rail:focus-within .brandSymbol{opacity:0;transform:scale(.88)}.rail:hover .brandFull,.rail.pinned .brandFull,.rail:focus-within .brandFull{opacity:1;transform:none}
+.editionMeta{height:0;opacity:0;overflow:hidden;margin:0 4px;border-top:1px solid #ffffff25;border-bottom:1px solid #ffffff25;transition:.12s}.rail:hover .editionMeta,.rail.pinned .editionMeta,.rail:focus-within .editionMeta{height:auto;opacity:1;padding:10px 2px;margin-bottom:5px}.editionMeta strong{display:block;font-size:13px}.editionMeta span{display:block;font-size:10px;color:#d7e2e8;margin-top:3px}
+.railNav{flex:1;overflow:auto;scrollbar-width:none}.railNav::-webkit-scrollbar{display:none}
+.group{height:0;opacity:0;overflow:hidden;font-size:8px;letter-spacing:.11em;text-transform:uppercase;font-weight:750;color:#b8cad5;white-space:nowrap;transition:.1s}.rail:hover .group,.rail.pinned .group,.rail:focus-within .group{height:auto;opacity:1;margin:11px 9px 4px}
+.navLink{height:39px;display:flex;align-items:center;gap:10px;padding:0 9px;border-radius:8px;text-decoration:none;color:#dce7ed;white-space:nowrap;position:relative}.navLink:hover,.navLink.active{background:#ffffff10;color:#fff}.navLink.active:before{content:"";position:absolute;left:0;top:9px;bottom:9px;width:2px;background:#fff;border-radius:2px}
+.navIcon{width:24px;min-width:24px;height:24px;display:grid;place-items:center}.navText{opacity:0;font-size:11.5px;font-weight:620;transition:.1s}.rail:hover .navText,.rail.pinned .navText,.rail:focus-within .navText{opacity:1}
+.railActions{border-top:1px solid #ffffff20;padding-top:7px;display:grid;gap:2px}.railBtn{height:37px;border:0;background:transparent;color:#dce7ed;display:flex;align-items:center;gap:10px;padding:0 9px;border-radius:8px;white-space:nowrap}.railBtn:hover{background:#ffffff10;color:#fff}
+.main{margin-left:var(--rail);transition:margin-left .18s ease}body.railPinned .main{margin-left:var(--railOpen)}
+
+/* topbar */
+.topbar{height:var(--top);position:sticky;top:0;z-index:70;background:#fffffff5;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:11px;padding:0 22px}
+.mobileMenu{display:none;border:0;background:transparent;padding:4px;color:var(--ink)}.topTitle{font-size:12.5px;font-weight:650;white-space:nowrap}.topCurrent{font-size:11px;color:#7c878d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.topSpacer{flex:1}.topLink{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--blue);font-weight:750;text-decoration:none}.progress{position:absolute;left:0;right:0;bottom:0;height:2px;background:#e8ecee}.progress i{display:block;height:100%;width:0;background:var(--blue)}
+
+/* layout */
+.canvas{width:min(var(--max),calc(100% - 52px));margin:auto;padding:28px 0 82px}
+.cover{background:#fff;border-top:3px solid var(--blue);padding:32px 36px 28px;display:grid;grid-template-columns:1.2fr .8fr;gap:38px;position:relative;overflow:hidden}
+.cover:after{content:"";position:absolute;right:-55px;top:-72px;width:250px;height:250px;background:none;opacity:.026}
+.cover h1{margin:8px 0 13px;max-width:760px}.coverLead{font-size:14.5px;color:#5d686f;line-height:1.65;max-width:68ch}
+.coverSide{align-self:end;border-left:2px solid var(--blue);padding-left:18px;position:relative;z-index:2}.coverSide h2{font-size:23px;margin:6px 0 7px}.coverSide p{font-size:12.5px;color:#626c72;line-height:1.52}
+.metrics{display:grid;grid-template-columns:repeat(5,1fr);background:var(--blue);color:#fff;margin-bottom:34px}.metric{padding:14px 16px;border-right:1px solid #ffffff2c}.metric:last-child{border-right:0}.metric b{display:block;font-size:23px;line-height:1;font-weight:670}.metric span{display:block;font-size:10.7px;color:#e1eaef;margin-top:4px}
+.section{margin-bottom:40px}.sectionHead{display:flex;justify-content:space-between;align-items:end;gap:22px;padding-bottom:13px;border-bottom:1px solid var(--line);margin-bottom:18px}.sectionHead h2{margin:4px 0}.sectionHead p{font-size:12.5px;color:#707a80;max-width:72ch}.count{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#7d888e;white-space:nowrap;padding-bottom:4px}
+
+/* proposals */
+.proposalToolbar{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.viewToggle,.filters{display:flex;gap:5px;flex-wrap:wrap}
+.toggleBtn,.filterBtn{border:1px solid #ccd5da;background:#fff;color:#5e6970;border-radius:6px;padding:7px 10px;font-size:10.5px;font-weight:700}
+.toggleBtn.active,.filterBtn.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.proposalSummaryBox{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 0 #dfe4e7}
+.tableWrap{overflow-x:auto}
+.proposalTable{width:100%;border-collapse:collapse;min-width:900px}
+.proposalTable th{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:#78838a;text-align:left;background:#f6f8f9;padding:10px 11px;border-bottom:1px solid var(--line)}.proposalTable td{padding:11px;border-bottom:1px solid #e5e9eb;vertical-align:top;font-size:11.5px;color:#566169}.proposalTable tr:last-child td{border-bottom:0}.proposalTable td:first-child strong{display:block;color:var(--ink);font-size:12.7px}.proposalTable td:first-child span{display:block;color:#859097;font-size:9.5px;margin-top:2px}
+.status{display:inline-flex;width:max-content;border-radius:999px;padding:4px 7px;font-size:8.5px;text-transform:uppercase;letter-spacing:.05em;font-weight:750;border:1px solid #ccd5da;background:#fff;color:#637078}.status.proposal{background:#eaf0f4;border-color:#cbd9e1;color:var(--blue)}.status.diagnosis{background:#f4eee2;border-color:#e4d7bc;color:var(--amber)}.status.contact{background:#f0f1f2;border-color:#dadddf;color:#68737a}.status.paused{background:#f3e9ec;border-color:#e2cfd5;color:var(--rose)}
+.proposalDetailed{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.proposalCard{background:#fff;border-radius:8px;padding:17px;box-shadow:0 1px 0 #dfe4e7}
+.proposalCardTop{display:flex;justify-content:space-between;gap:12px;align-items:start}.proposalCardTop h3{margin:8px 0 3px}.proposalMeta{font-size:10px;color:#7a858b}.updated{font-size:9px;color:#8a949a;white-space:nowrap}.proposalSummary{font-size:12px;color:#4f5b62;line-height:1.5;margin-top:11px}.proposalDetail{font-size:11px;color:#68737a;line-height:1.5;margin-top:7px}.nextStep{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);display:grid;grid-template-columns:105px 1fr;gap:9px}.nextStep b{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--blue)}.nextStep span{font-size:11.3px;color:#4f5b62}
+
+/* grouped sections */
+.cardGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.simpleCard{background:#fff;padding:16px;border-top:3px solid var(--blue);min-height:145px}.simpleCard h3{margin:8px 0 5px}.simpleCard p{font-size:11.6px;color:#5f696f;line-height:1.48}.simpleCard small{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:#77838a;font-weight:700}
+.exitGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.exitCard{background:#fff;padding:16px;border-left:4px solid #9aa6ad}.exitCard h3{margin-bottom:4px}.exitCard p{font-size:11.6px;color:#5f696f}.exitNote{font-size:10px;color:#7d888e;margin-top:6px}
+.partners{background:#fff;border-top:1px solid #252c31}.partnerRow{display:grid;grid-template-columns:1.05fr .95fr 1fr;gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}.partnerRow h3{font-size:17px}.partnerRow small{display:block;font-size:10px;color:#7a858b;margin-top:3px}.partnerRow b{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--blue)}.partnerRow p{font-size:11.7px;color:#5e686f;margin-top:3px}
+.projectGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.projectCard{background:#fff;padding:16px}.projectCard h3{margin:7px 0 5px}.projectCard p{font-size:11.6px;color:#5f696f}.projectState{display:inline-block;margin-top:9px;font-size:9px;font-weight:700;color:var(--blue)}
+.internalGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.internalCard{background:#fff;padding:16px}.internalCard h3{margin:7px 0 5px}.internalCard p{font-size:11.6px;color:#5f696f}.flow{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:10px}.flow span{font-size:9.2px;background:#edf2f4;border-radius:999px;padding:5px 7px;color:#57636a}.flow i{font-style:normal;color:#91a4af}
+.newsList{display:grid;background:#fff}.newsRow{display:grid;grid-template-columns:180px 1fr;gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}.newsRow:last-child{border-bottom:0}.newsRow b{font-size:11px;color:var(--blue)}.newsRow h3{font-size:17px;margin-bottom:4px}.newsRow p{font-size:11.7px;color:#5f696f}
+.notice{background:#edf2f4;border-left:4px solid var(--blue);padding:15px 17px}.notice ul{margin:7px 0 0 18px;padding:0}.notice li{font-size:11.7px;color:#566169;margin:4px 0}
+.nextList{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}.nextItem{background:#fff;border-top:3px solid var(--blue);padding:13px;min-height:100px}.nextItem b{display:block;font-size:13px;margin-bottom:3px}.nextItem p{font-size:11px;color:#657078}
+
+
+/* V11 — acabamento visual e orientação operacional */
+.canvas{width:min(var(--max),calc(100% - 56px))}
+.sectionHead{margin-bottom:16px}
+.sectionHead h2{max-width:900px}
+.sectionHead p{max-width:78ch}
+.cover{box-shadow:0 1px 0 #dde4e7}
+.metrics{box-shadow:0 1px 0 #cad5db}
+.proposalToolbar{background:var(--bg);padding:2px 0 10px}
+.proposalTable tbody tr:hover{background:#fafbfb}
+.simpleCard,.projectCard,.internalCard,.exitCard{box-shadow:0 1px 0 #dfe4e7}
+.partners{background:#fff;border-top:0;border-radius:8px;overflow:hidden;box-shadow:0 1px 0 #d9e0e4}
+.partnerRow{grid-template-columns:1.05fr .95fr 1fr;gap:22px;padding:17px 18px;border-bottom:1px solid var(--line)}
+.partnerRow:first-child{border-top:3px solid var(--blue)}
+.partnerRow:last-child{border-bottom:0}
+.partnerRow:hover{background:#fafbfb}
+.partnerRow h3{font-size:17.5px}
+.partnerRow p{line-height:1.48}
+.newsList{border-radius:8px;overflow:hidden;box-shadow:0 1px 0 #dfe4e7}
+.newsRow{grid-template-columns:170px 1fr;gap:22px;padding:16px 18px}
+.newsRow:first-child{border-top:3px solid var(--blue)}
+.newsRow b{padding-top:2px}
+.newsRow h3{font-size:17.5px}
+.publishGuide{margin-top:16px;background:var(--navy);color:#fff;border-radius:10px;padding:24px 25px 22px}
+.publishGuide .eyebrow{color:#cbdce5}
+.publishGuideTop{display:grid;grid-template-columns:.72fr 1.28fr;gap:26px;align-items:end;padding-bottom:18px;border-bottom:1px solid #ffffff25}
+.publishGuideTop h3{font-size:27px;line-height:1.16;margin-top:5px}
+.publishGuideTop p{color:#d7e2e8;font-size:12.5px;max-width:72ch}
+.publishSteps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ffffff24;margin-top:18px}
+.publishStep{background:var(--navy);padding:15px 16px 16px;min-height:145px}
+.stepNo{font-family:Georgia,serif;font-size:21px;color:#9db6c5;margin-bottom:7px}
+.publishStep b{display:block;font-size:13px;margin-bottom:5px}
+.publishStep p{font-size:11.2px;line-height:1.5;color:#d6e1e7}
+.codeLine{display:block;margin-top:7px;padding:6px 8px;background:#ffffff0d;border:1px solid #ffffff24;font-family:Consolas,"Courier New",monospace;font-size:10.3px;color:#fff;word-break:break-all}
+.publishRules{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.ruleCard{border:1px solid #ffffff23;padding:12px 13px}
+.ruleCard b{display:block;font-size:11px;margin-bottom:4px}
+.ruleCard p{color:#cbd9e1;font-size:10.8px}
+.notice{border-radius:0 8px 8px 0;box-shadow:0 1px 0 #dde4e7}
+.notice li{line-height:1.52}
+.changesSince{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.changeSince{background:#fff;padding:14px 15px;border-left:3px solid var(--blue);box-shadow:0 1px 0 #dfe4e7}
+.changeSince b{display:block;font-size:13.5px;margin-bottom:3px}
+.changeSince p{font-size:11.4px;color:#606b72;line-height:1.47}
+@media(min-width:1600px){:root{--max:1240px}}
+@media(max-width:1050px){.publishSteps{grid-template-columns:1fr 1fr}}
+@media(max-width:980px){.publishGuideTop{grid-template-columns:1fr}}
+@media(max-width:700px){.canvas{width:min(100% - 28px,var(--max))}.publishSteps,.publishRules,.changesSince{grid-template-columns:1fr}.partnerRow,.newsRow{padding:15px}}
+
+/* modal/mobile */
+.mobileOverlay{display:none}
+@media(max-width:1050px){.metrics{grid-template-columns:repeat(3,1fr)}.metric{border-bottom:1px solid #ffffff2a}.cardGrid,.projectGrid{grid-template-columns:1fr 1fr}.proposalDetailed{grid-template-columns:1fr}.nextList{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:980px){
+ .rail{display:none}.main,body.railPinned .main{margin-left:0}
+ .mobileMenu{display:grid;place-items:center}
+ .mobileOverlay.show{display:block;position:fixed;inset:0;background:#102431b8;z-index:110}
+ .mobileDrawer{width:min(84vw,310px);height:100%;background:var(--blue);color:#fff;padding:18px;overflow:auto;scrollbar-width:none}.mobileDrawer::-webkit-scrollbar{display:none}.mobileDrawer img{width:166px;margin-bottom:18px}.mobileGroup{font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#b8cbd6;font-weight:750;margin:15px 0 4px}.mobileDrawer a{display:flex;align-items:center;gap:9px;color:#e2ebf0;text-decoration:none;padding:9px 0;border-bottom:1px solid #ffffff15;font-size:12px}
+ .cover{grid-template-columns:1fr}.coverSide{border-left:0;border-top:2px solid var(--blue);padding:14px 0 0}
+ .partnerRow,.newsRow{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.nextList{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+ .canvas{width:min(100% - 28px,var(--max));padding-top:16px}.topbar{padding:0 13px}.topCurrent,.topLink{display:none}.cover{padding:25px 21px}.cover h1{font-size:36px}
+ .metrics,.cardGrid,.projectGrid,.internalGrid,.exitGrid,.nextList{grid-template-columns:1fr}
+ .proposalToolbar{align-items:flex-start;flex-direction:column}
+ .section{margin-bottom:34px}
+}
+</style></head><body>
+<section id="login" class="login"><div class="loginCard"><div class="loginLogo">LeanCo.</div><div class="eyebrow">Ambiente interno</div><h1>Informativo Lean</h1><p>Principais movimentos, clientes, propostas, ferramentas e novidades da Lean Company.</p><label>Senha</label><div class="loginRow"><input id="password" type="password" placeholder="Digite a senha"><button onclick="unlock()">Entrar</button></div><div id="err" class="err"></div><small>Protótipo: senha <b>lean</b>.</small></div></section>
+
+<div id="app" class="hidden">
+<aside class="rail" id="rail"><div class="railInner"><div class="brand"><div class="brandSymbol brandMark">L</div><div class="brandFull brandWord">LeanCo.</div></div><div class="editionMeta"><strong>Informativo Lean</strong><span>Setembro de 2026</span></div><nav class="railNav"><div class="group">Visão geral</div><a class="navLink" href="#visao" data-label="Visão geral" title="Visão geral"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/><path d="M9 20v-6h6v6"/></svg></span><span class="navText">Visão geral</span></a><div class="group">Comercial</div><a class="navLink" href="#propostas" data-label="Propostas em aberto" title="Propostas em aberto"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M8 7V5h8v2"/><path d="M3 12h18"/></svg></span><span class="navText">Propostas em aberto</span></a><a class="navLink" href="#fechadas" data-label="Fechadas" title="Fechadas"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><span class="navText">Fechadas</span></a><a class="navLink" href="#perdidas" data-label="Não fechadas" title="Não fechadas"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></span><span class="navText">Não fechadas</span></a><a class="navLink" href="#encerrados" data-label="Clientes que saíram" title="Clientes que saíram"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M5 7v13h14V7"/><path d="M3 4h18v3H3z"/><path d="M10 11h4"/></svg></span><span class="navText">Clientes que saíram</span></a><a class="navLink" href="#parcerias" data-label="Parcerias" title="Parcerias"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"/><path d="M14 11a5 5 0 0 0-7.1 0l-2 2A5 5 0 0 0 12 20.1l1.1-1.1"/></svg></span><span class="navText">Parcerias</span></a><div class="group">Ferramentas</div><a class="navLink" href="#projetos" data-label="Projetos de clientes" title="Projetos de clientes"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></span><span class="navText">Projetos de clientes</span></a><a class="navLink" href="#internas" data-label="Ferramentas Lean" title="Ferramentas Lean"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5-5l2.2 2.2-2.8 2.8-2.2-2.2a4 4 0 0 0 5 5L19 16.2a2 2 0 0 1-2.8 2.8l-7.1-7.1"/></svg></span><span class="navText">Ferramentas Lean</span></a><a class="navLink" href="#novidades" data-label="Novidades" title="Novidades"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l1.3 4.7L18 8l-4.7 1.3L12 14l-1.3-4.7L6 8l4.7-1.3z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></span><span class="navText">Novidades</span></a><div class="group">Fechamento</div><a class="navLink" href="#avisos" data-label="Avisos" title="Avisos"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/></svg></span><span class="navText">Avisos</span></a><a class="navLink" href="#proximos" data-label="Próximos movimentos" title="Próximos movimentos"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m14 7 5 5-5 5"/></svg></span><span class="navText">Próximos movimentos</span></a></nav><div class="railActions"><button class="railBtn" onclick="openContribution()"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg></span><span class="navText">Enviar atualização</span></button><button class="railBtn" onclick="location.href='../'"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M5 7v13h14V7"/><path d="M3 4h18v3H3z"/><path d="M10 11h4"/></svg></span><span class="navText">Edições anteriores</span></button><button class="railBtn" onclick="pinRail()"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 4 6 6-3 1-4 4-1 5-2-2-2-2 5-1 4-4z"/><path d="m4 20 5-5"/></svg></span><span class="navText" id="pinText">Fixar menu</span></button><button class="railBtn" onclick="lock()"><span class="navIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 17l5-5-5-5"/><path d="M15 12H3"/><path d="M14 3h6v18h-6"/></svg></span><span class="navText">Sair</span></button></div></div></aside>
+<div class="mobileOverlay" id="mobileOverlay" onclick="overlayClose(event)"><div class="mobileDrawer"><div class="loginLogo">LeanCo.</div><div class="mobileGroup">Visão geral</div><a href="#visao" onclick="closeMobile()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5"/><path d="M9 20v-6h6v6"/></svg><span>Visão geral</span></a><div class="mobileGroup">Comercial</div><a href="#propostas" onclick="closeMobile()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M8 7V5h8v2"/><path d="M3 12h18"/></svg><span>Propostas em aberto</span></a><a href="#fechadas" onclick="closeMobile()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Fechadas</span></a><a href="#perdidas" onclick="closeMobile()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span>Não fechadas</span></a><a href="#encerrados" onclick="closeMobile()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M5 7v13h14V7"/><path d="M3 4h18v3H3z"/><path d="M10 11h4"/></svg><span>Clientes que saíram</span></a><a href="#parcerias" onclick="closeMobile()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"/><path d="M14 11a5 5 0 0 0-7.1 0l-2 2A5 5 0 0 0 12 20.1l1.1-1.1"/></svg><span>Parcerias</span></a><div class="mobileGroup">Ferramentas</div><a href="#projetos" onclick="closeMobile()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg><span>Projetos de clientes</span></a><a href="#internas" onclick="closeMobile()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5-5l2.2 2.2-2.8 2.8-2.2-2.2a4 4 0 0 0 5 5L19 16.2a2 2 0 0 1-2.8 2.8l-7.1-7.1"/></svg><span>Ferramentas Lean</span></a><a href="#novidades" onclick="closeMobile()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l1.3 4.7L18 8l-4.7 1.3L12 14l-1.3-4.7L6 8l4.7-1.3z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg><span>Novidades</span></a><div class="mobileGroup">Fechamento</div><a href="#avisos" onclick="closeMobile()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/></svg><span>Avisos</span></a><a href="#proximos" onclick="closeMobile()"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m14 7 5 5-5 5"/></svg><span>Próximos movimentos</span></a><div class="mobileGroup">Ações</div><a href="#" onclick="openContribution();closeMobile();return false"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg><span>Enviar atualização</span></a><a href="../"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M5 7v13h14V7"/><path d="M3 4h18v3H3z"/><path d="M10 11h4"/></svg><span>Edições anteriores</span></a></div></div>
+<main class="main"><header class="topbar"><button class="mobileMenu" onclick="openMobile()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><div class="topTitle">Informativo Lean · Setembro de 2026</div><div class="topCurrent" id="current">Visão geral</div><div class="topSpacer"></div><a class="topLink" href="../">Edições anteriores</a><div class="progress"><i id="bar"></i></div></header>
+<div class="canvas">
+
+<section class="cover" id="visao"><div><div class="eyebrow">Setembro de 2026 · Atualizado em 30/09</div><h1>Tudo o que importa, separado por assunto.</h1><p class="coverLead">Propostas em aberto, fechamentos, negociações perdidas, clientes que saíram, parcerias, projetos, ferramentas, novidades, orientações e avisos — cada informação concentrada em um único lugar.</p></div><aside class="coverSide"><div class="eyebrow">Como ler</div><h2>Comece pelo resumo. Aprofunde só o que interessar.</h2><p>A área comercial abre em visão resumida e pode ser alternada para a versão detalhada com histórico e próximo passo.</p></aside></section>
+<div class="metrics"><div class="metric"><b>23</b><span>negociações abertas</span></div><div class="metric"><b>03</b><span>fechamentos</span></div><div class="metric"><b>03</b><span>negociações não fechadas</span></div><div class="metric"><b>05</b><span>parcerias em estruturação</span></div><div class="metric"><b>06+</b><span>projetos e ferramentas em evolução</span></div></div>
+
+<section class="section" id="propostas"><div class="sectionHead"><div><div class="eyebrow">Comercial</div><h2>Propostas e negociações em aberto</h2><p>Todas as oportunidades ativas estão aqui. Alterne entre a leitura resumida e a detalhada, ou filtre por estágio.</p></div><div class="count">23 abertas</div></div>
+<div class="proposalToolbar"><div class="viewToggle"><button class="toggleBtn active" data-view="summary" onclick="setProposalView('summary')">Visão resumida</button><button class="toggleBtn" data-view="detail" onclick="setProposalView('detail')">Visão detalhada</button></div><div class="filters"><button class="filterBtn active" data-group="all" onclick="filterProposals('all')">Todas · 23</button><button class="filterBtn" data-group="proposal" onclick="filterProposals('proposal')">Proposta enviada · 9</button><button class="filterBtn" data-group="diagnosis" onclick="filterProposals('diagnosis')">Diagnóstico · 3</button><button class="filterBtn" data-group="contact" onclick="filterProposals('contact')">Contato inicial · 6</button><button class="filterBtn" data-group="paused" onclick="filterProposals('paused')">Pausadas · 5</button></div></div>
+<div id="summaryView" class="proposalSummaryBox"><div class="tableWrap"><table class="proposalTable"><thead><tr><th>Empresa</th><th>Situação</th><th>Projeto</th><th>Próximo passo</th><th>Responsável</th></tr></thead><tbody><tr data-group="proposal"><td><strong>Kietec | Danone</strong><span>Curitiba/PR</span></td><td><span class="status proposal">Proposta enviada</span></td><td>Produto</td><td>Cobrar retorno sobre a proposta apresentada à Danone.</td><td>Bruno</td></tr><tr data-group="proposal"><td><strong>Incopostes</strong><span>Paranavaí/PR</span></td><td><span class="status proposal">Proposta enviada</span></td><td>Treinamento Lean</td><td>Cobrar retorno do orçamento após análise da diretoria.</td><td>Daniel</td></tr><tr data-group="paused"><td><strong>Apisnutri</strong><span>Mandaguari/PR</span></td><td><span class="status paused">Pausado</span></td><td>Mentoria</td><td>Retomar contato após o prazo solicitado e confirmar interesse.</td><td>João</td></tr><tr data-group="paused"><td><strong>Real Lacto</strong><span>Guaíra/PR</span></td><td><span class="status paused">Pausado</span></td><td>Mentoria</td><td>Confirmar a data efetiva de início do projeto.</td><td>João</td></tr><tr data-group="paused"><td><strong>Lactopar</strong><span>Laranjeiras/PR</span></td><td><span class="status paused">Pausado</span></td><td>Mentoria</td><td>Pedir ao João Souza ajuda para reativar o contato.</td><td>João</td></tr><tr data-group="proposal"><td><strong>Solucon</strong><span>Londrina/PR</span></td><td><span class="status proposal">Proposta enviada</span></td><td>Mentoria</td><td>Acompanhar retorno e reativar a conversa.</td><td>Daniel</td></tr><tr data-group="proposal"><td><strong>MB Esquadrias</strong><span>Londrina/PR</span></td><td><span class="status proposal">Proposta enviada</span></td><td>Mentoria</td><td>Cobrar decisão sobre a proposta.</td><td>Bruno</td></tr><tr data-group="paused"><td><strong>Torrezan</strong><span>Loanda/PR</span></td><td><span class="status paused">Pausado</span></td><td>Mentoria + Produto</td><td>Preparar nova abordagem e definir retomada.</td><td>Nathan</td></tr><tr data-group="proposal"><td><strong>Excellence</strong><span>Presidente Castelo Branco/PR</span></td><td><span class="status proposal">Proposta enviada</span></td><td>BPO</td><td>Cobrar retorno do orçamento de BPO.</td><td>Bruno</td></tr><tr data-group="paused"><td><strong>DColor</strong><span>Londrina/PR</span></td><td><span class="status paused">Pausado</span></td><td>Produto</td><td>Retomar contato no período combinado.</td><td>João</td></tr><tr data-group="proposal"><td><strong>Dias Auto Posto</strong><span>Terra Rica/PR · Marilena/PR</span></td><td><span class="status proposal">Proposta enviada</span></td><td>Mentoria</td><td>Cobrar retorno da proposta.</td><td>João</td></tr><tr data-group="diagnosis"><td><strong>FF Law</strong><span>São Paulo/SP</span></td><td><span class="status diagnosis">Diagnóstico</span></td><td>Mentoria + BPO</td><td>Realizar a reunião e atualizar a proposta de BPO e mentoria.</td><td>Bruno</td></tr><tr data-group="contact"><td><strong>Josué Vieira</strong><span>Presidente Castelo Branco/PR</span></td><td><span class="status contact">Contato inicial</span></td><td>BPO</td><td>Agendar nova conversa e aprofundar a necessidade.</td><td>Bruno</td></tr><tr data-group="proposal"><td><strong>LCL</strong><span>Atibaia/SP</span></td><td><span class="status proposal">Proposta enviada</span></td><td>BPO</td><td>Acompanhar retorno no período previsto.</td><td>João</td></tr><tr data-group="proposal"><td><strong>RL Sistemas</strong><span>Apucarana/PR</span></td><td><span class="status proposal">Proposta enviada</span></td><td>Mentoria</td><td>Definir e realizar a reunião de fechamento.</td><td>Daniel</td></tr><tr data-group="diagnosis"><td><strong>Uniproof</strong><span>São Paulo/SP</span></td><td><span class="status diagnosis">Diagnóstico</span></td><td>Mentoria</td><td>Retomar contato no período solicitado.</td><td>João</td></tr><tr data-group="diagnosis"><td><strong>JGA Alimentos</strong><span>Cruzeiro do Sul/PR</span></td><td><span class="status diagnosis">Diagnóstico</span></td><td>Mentoria + Produto</td><td>Estruturar a proposta de BI/HTML e continuidade.</td><td>Bruno</td></tr><tr data-group="contact"><td><strong>Laticínios Campo Vivo</strong><span>Arapongas/PR</span></td><td><span class="status contact">Contato inicial</span></td><td>Mentoria</td><td>Agendar conversa e levantar a demanda.</td><td>Bruno</td></tr><tr data-group="contact"><td><strong>Bolha Embalagens</strong><span>Paiçandu/PR</span></td><td><span class="status contact">Contato inicial</span></td><td>Produto</td><td>Agendar conversa e entender a oportunidade.</td><td>Bruno</td></tr><tr data-group="proposal"><td><strong>Granitolit</strong><span>Marialva/PR</span></td><td><span class="status proposal">Proposta enviada</span></td><td>Produto</td><td>Cobrar retorno da proposta.</td><td>Emerson</td></tr><tr data-group="contact"><td><strong>Margui</strong><span>Caxias do Sul/RS</span></td><td><span class="status contact">Contato inicial</span></td><td>Produto</td><td>Agendar conversa e levantar a demanda.</td><td>Daniel</td></tr><tr data-group="contact"><td><strong>Eletroluz</strong><span>Maringá/PR</span></td><td><span class="status contact">Contato inicial</span></td><td>Outros</td><td>Agendar conversa e levantar a demanda.</td><td>Bruno</td></tr><tr data-group="contact"><td><strong>Celeiros | Trot&#x27;s</strong><span>Jandaia do Sul/PR</span></td><td><span class="status contact">Contato inicial</span></td><td>Mentoria</td><td>Retomar contato após a mudança da empresa.</td><td>Daniel</td></tr></tbody></table></div></div>
+<div id="detailView" class="proposalDetailed hidden"><article class="proposalCard" data-group="proposal">
+            <div class="proposalCardTop"><div><span class="status proposal">Proposta enviada</span><h3>Kietec | Danone</h3><p class="proposalMeta">Produto · Curitiba/PR · Responsável Lean: Bruno</p></div><span class="updated">Atualizado 29/09</span></div>
+            <p class="proposalSummary">Mapeamento de processos do RH da Danone, com cerca de 60 pessoas, por meio da Kietec.</p>
+            <div class="proposalDetail">Trabalho previsto para aproximadamente 2 meses, com 9 a 10 visitas e participação de 2 consultores. A proposta foi apresentada e a reunião com a gestão já aconteceu.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Cobrar retorno sobre a proposta apresentada à Danone.</span></div>
+        </article><article class="proposalCard" data-group="proposal">
+            <div class="proposalCardTop"><div><span class="status proposal">Proposta enviada</span><h3>Incopostes</h3><p class="proposalMeta">Treinamento Lean · Paranavaí/PR · Responsável Lean: Daniel</p></div><span class="updated">Atualizado 29/09</span></div>
+            <p class="proposalSummary">Treinamento interno de Lean com proposta para 8 dias, dividido por módulos e instrutores.</p>
+            <div class="proposalDetail">A oportunidade pode evoluir para consultoria recorrente. A diretoria ainda está analisando a proposta.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Cobrar retorno do orçamento após análise da diretoria.</span></div>
+        </article><article class="proposalCard" data-group="paused">
+            <div class="proposalCardTop"><div><span class="status paused">Pausado</span><h3>Apisnutri</h3><p class="proposalMeta">Mentoria · Mandaguari/PR · Responsável Lean: João</p></div><span class="updated">Atualizado 17/09</span></div>
+            <p class="proposalSummary">Recorrência de 4 dias, começando pelo financeiro e apoio na mudança de sistema.</p>
+            <div class="proposalDetail">A ideia é avançar posteriormente para produção. O cliente pediu algumas semanas antes de retomar.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Retomar contato após o prazo solicitado e confirmar interesse.</span></div>
+        </article><article class="proposalCard" data-group="paused">
+            <div class="proposalCardTop"><div><span class="status paused">Pausado</span><h3>Real Lacto</h3><p class="proposalMeta">Mentoria · Guaíra/PR · Responsável Lean: João</p></div><span class="updated">Atualizado 30/09</span></div>
+            <p class="proposalSummary">Projeto de 4 dias por mês voltado a dados, estratégia e financeiro.</p>
+            <div class="proposalDetail">A empresa chegou a fechar, mas pediu para postergar o início. No CRM atual a negociação está pausada.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Confirmar a data efetiva de início do projeto.</span></div>
+        </article><article class="proposalCard" data-group="paused">
+            <div class="proposalCardTop"><div><span class="status paused">Pausado</span><h3>Lactopar</h3><p class="proposalMeta">Mentoria · Laranjeiras/PR · Responsável Lean: João</p></div><span class="updated">Atualizado 17/08</span></div>
+            <p class="proposalSummary">Laticínio indicado pelo ERP MyMilk; o contato inicial não avançou.</p>
+            <div class="proposalDetail">João Souza é contador da empresa e pode ajudar a intermediar a retomada.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Pedir ao João Souza ajuda para reativar o contato.</span></div>
+        </article><article class="proposalCard" data-group="proposal">
+            <div class="proposalCardTop"><div><span class="status proposal">Proposta enviada</span><h3>Solucon</h3><p class="proposalMeta">Mentoria · Londrina/PR · Responsável Lean: Daniel</p></div><span class="updated">Atualizado 24/09</span></div>
+            <p class="proposalSummary">Projeto recorrente de 4 dias envolvendo estruturação financeira e produção.</p>
+            <div class="proposalDetail">Inclui balanceamento, apontamento e layout. Foi enviada nova mensagem sugerindo dois dias gratuitos, ainda sem retorno.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Acompanhar retorno e reativar a conversa.</span></div>
+        </article><article class="proposalCard" data-group="proposal">
+            <div class="proposalCardTop"><div><span class="status proposal">Proposta enviada</span><h3>MB Esquadrias</h3><p class="proposalMeta">Mentoria · Londrina/PR · Responsável Lean: Bruno</p></div><span class="updated">Atualizado 28/09</span></div>
+            <p class="proposalSummary">Projeto pontual de produção por cerca de 3 meses, com potencial de futura recorrência.</p>
+            <div class="proposalDetail">O desenho é semelhante ao projeto realizado anteriormente na AllGlass. Origem: Guilherme Defende.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Cobrar decisão sobre a proposta.</span></div>
+        </article><article class="proposalCard" data-group="paused">
+            <div class="proposalCardTop"><div><span class="status paused">Pausado</span><h3>Torrezan</h3><p class="proposalMeta">Mentoria + Produto · Loanda/PR · Responsável Lean: Nathan</p></div><span class="updated">Atualizado 30/09</span></div>
+            <p class="proposalSummary">Rede de postos com proposta envolvendo análise gerencial e ferramenta ligada à oscilação do combustível.</p>
+            <div class="proposalDetail">A frente inclui previsão relacionada ao dólar, precificação e análises de resultado por posto. Negociação pausada.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Preparar nova abordagem e definir retomada.</span></div>
+        </article><article class="proposalCard" data-group="proposal">
+            <div class="proposalCardTop"><div><span class="status proposal">Proposta enviada</span><h3>Excellence</h3><p class="proposalMeta">BPO · Presidente Castelo Branco/PR · Responsável Lean: Bruno</p></div><span class="updated">Atualizado 30/09</span></div>
+            <p class="proposalSummary">Cliente atual que solicitou orçamento adicional de BPO financeiro.</p>
+            <div class="proposalDetail">A proposta adicional já foi apresentada e segue aguardando retorno.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Cobrar retorno do orçamento de BPO.</span></div>
+        </article><article class="proposalCard" data-group="paused">
+            <div class="proposalCardTop"><div><span class="status paused">Pausado</span><h3>DColor</h3><p class="proposalMeta">Produto · Londrina/PR · Responsável Lean: João</p></div><span class="updated">Atualizado 11/09</span></div>
+            <p class="proposalSummary">Proposta enviada; o cliente pediu mais tempo antes de retomar.</p>
+            <div class="proposalDetail">A retomada está planejada para o início de 2027.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Retomar contato no período combinado.</span></div>
+        </article><article class="proposalCard" data-group="proposal">
+            <div class="proposalCardTop"><div><span class="status proposal">Proposta enviada</span><h3>Dias Auto Posto</h3><p class="proposalMeta">Mentoria · Terra Rica/PR · Marilena/PR · Responsável Lean: João</p></div><span class="updated">Atualizado 24/09</span></div>
+            <p class="proposalSummary">Mentoria para uma operação com unidades em Terra Rica e Marilena.</p>
+            <div class="proposalDetail">A proposta foi enviada e está aguardando retorno.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Cobrar retorno da proposta.</span></div>
+        </article><article class="proposalCard" data-group="diagnosis">
+            <div class="proposalCardTop"><div><span class="status diagnosis">Diagnóstico</span><h3>FF Law</h3><p class="proposalMeta">Mentoria + BPO · São Paulo/SP · Responsável Lean: Bruno</p></div><span class="updated">Atualizado 29/09</span></div>
+            <p class="proposalSummary">Retomada de oportunidade de mentoria com nova solicitação de BPO.</p>
+            <div class="proposalDetail">A Lean apresentou proposta há alguns meses, quando ainda não havia capacidade para o BPO. A empresa voltou a solicitar orçamento.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Realizar a reunião e atualizar a proposta de BPO e mentoria.</span></div>
+        </article><article class="proposalCard" data-group="contact">
+            <div class="proposalCardTop"><div><span class="status contact">Contato inicial</span><h3>Josué Vieira</h3><p class="proposalMeta">BPO · Presidente Castelo Branco/PR · Responsável Lean: Bruno</p></div><span class="updated">Atualizado 09/09</span></div>
+            <p class="proposalSummary">Indicação da Excellence para BPO e estruturação pontual de processos financeiros.</p>
+            <div class="proposalDetail">O contato inicial já aconteceu, mas a conversa ainda precisa avançar para definição de demanda.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Agendar nova conversa e aprofundar a necessidade.</span></div>
+        </article><article class="proposalCard" data-group="proposal">
+            <div class="proposalCardTop"><div><span class="status proposal">Proposta enviada</span><h3>LCL</h3><p class="proposalMeta">BPO · Atibaia/SP · Responsável Lean: João</p></div><span class="updated">Atualizado 23/09</span></div>
+            <p class="proposalSummary">Oportunidade de BPO originada em evento do G4.</p>
+            <div class="proposalDetail">A proposta foi enviada e a conversa ficou para retomada futura.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Acompanhar retorno no período previsto.</span></div>
+        </article><article class="proposalCard" data-group="proposal">
+            <div class="proposalCardTop"><div><span class="status proposal">Proposta enviada</span><h3>RL Sistemas</h3><p class="proposalMeta">Mentoria · Apucarana/PR · Responsável Lean: Daniel</p></div><span class="updated">Atualizado 29/09</span></div>
+            <p class="proposalSummary">Mentoria em fase avançada de negociação.</p>
+            <div class="proposalDetail">A equipe está organizando uma reunião de fechamento.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Definir e realizar a reunião de fechamento.</span></div>
+        </article><article class="proposalCard" data-group="diagnosis">
+            <div class="proposalCardTop"><div><span class="status diagnosis">Diagnóstico</span><h3>Uniproof</h3><p class="proposalMeta">Mentoria · São Paulo/SP · Responsável Lean: João</p></div><span class="updated">Atualizado 18/09</span></div>
+            <p class="proposalSummary">Oportunidade indicada pela Renata, da BCY.</p>
+            <div class="proposalDetail">Após novos contatos, o cliente pediu para retomar a conversa nos próximos meses.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Retomar contato no período solicitado.</span></div>
+        </article><article class="proposalCard" data-group="diagnosis">
+            <div class="proposalCardTop"><div><span class="status diagnosis">Diagnóstico</span><h3>JGA Alimentos</h3><p class="proposalMeta">Mentoria + Produto · Cruzeiro do Sul/PR · Responsável Lean: Bruno</p></div><span class="updated">Atualizado 25/09</span></div>
+            <p class="proposalSummary">Nova oportunidade de BI/HTML publicado e possível continuidade mensal.</p>
+            <div class="proposalDetail">A ideia é otimizar entregas já realizadas e manter uma visita mensal para validação dos dados, sem novas demandas relevantes.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Estruturar a proposta de BI/HTML e continuidade.</span></div>
+        </article><article class="proposalCard" data-group="contact">
+            <div class="proposalCardTop"><div><span class="status contact">Contato inicial</span><h3>Laticínios Campo Vivo</h3><p class="proposalMeta">Mentoria · Arapongas/PR · Responsável Lean: Bruno</p></div><span class="updated">Atualizado 25/09</span></div>
+            <p class="proposalSummary">Indicação da MW; empresa demonstrou insatisfação com a consultoria atual.</p>
+            <div class="proposalDetail">A demanda ainda precisa ser levantada antes de estruturar qualquer proposta.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Agendar conversa e levantar a demanda.</span></div>
+        </article><article class="proposalCard" data-group="contact">
+            <div class="proposalCardTop"><div><span class="status contact">Contato inicial</span><h3>Bolha Embalagens</h3><p class="proposalMeta">Produto · Paiçandu/PR · Responsável Lean: Bruno</p></div><span class="updated">Atualizado 23/09</span></div>
+            <p class="proposalSummary">Empresa que realizou mudança de sistema recentemente.</p>
+            <div class="proposalDetail">A oportunidade ainda está em fase inicial e o escopo precisa ser aprofundado.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Agendar conversa e entender a oportunidade.</span></div>
+        </article><article class="proposalCard" data-group="proposal">
+            <div class="proposalCardTop"><div><span class="status proposal">Proposta enviada</span><h3>Granitolit</h3><p class="proposalMeta">Produto · Marialva/PR · Responsável Lean: Emerson</p></div><span class="updated">Atualizado 28/09</span></div>
+            <p class="proposalSummary">Oportunidade de produto com proposta enviada.</p>
+            <div class="proposalDetail">A negociação está aguardando retorno do cliente.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Cobrar retorno da proposta.</span></div>
+        </article><article class="proposalCard" data-group="contact">
+            <div class="proposalCardTop"><div><span class="status contact">Contato inicial</span><h3>Margui</h3><p class="proposalMeta">Produto · Caxias do Sul/RS · Responsável Lean: Daniel</p></div><span class="updated">Atualizado 28/09</span></div>
+            <p class="proposalSummary">Nova oportunidade de produto em fase inicial.</p>
+            <div class="proposalDetail">Ainda não há escopo detalhado registrado no CRM.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Agendar conversa e levantar a demanda.</span></div>
+        </article><article class="proposalCard" data-group="contact">
+            <div class="proposalCardTop"><div><span class="status contact">Contato inicial</span><h3>Eletroluz</h3><p class="proposalMeta">Outros · Maringá/PR · Responsável Lean: Bruno</p></div><span class="updated">Atualizado 29/09</span></div>
+            <p class="proposalSummary">Nova oportunidade em fase de primeiro contato.</p>
+            <div class="proposalDetail">O CRM ainda não possui detalhamento suficiente do escopo.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Agendar conversa e levantar a demanda.</span></div>
+        </article><article class="proposalCard" data-group="contact">
+            <div class="proposalCardTop"><div><span class="status contact">Contato inicial</span><h3>Celeiros | Trot&#x27;s</h3><p class="proposalMeta">Mentoria · Jandaia do Sul/PR · Responsável Lean: Daniel</p></div><span class="updated">Atualizado 29/09</span></div>
+            <p class="proposalSummary">Oportunidade de mentoria em contato inicial.</p>
+            <div class="proposalDetail">A empresa está passando por mudança de barracão antes de avançar a conversa.</div>
+            <div class="nextStep"><b>Próximo passo</b><span>Retomar contato após a mudança da empresa.</span></div>
+        </article></div>
+</section>
+
+<section class="section" id="fechadas"><div class="sectionHead"><div><div class="eyebrow">Fechadas</div><h2>Negociações que viraram contrato</h2><p>Somente os fechamentos atuais registrados no CRM.</p></div><div class="count">3 fechamentos</div></div><div class="cardGrid"><article class="simpleCard"><small>Mentoria</small><h3>Laranjeiras Terraplanagem</h3><p><b>Londrina/PR</b><br>Projeto fechado apenas com Mentoria; o BPO não entrou neste fechamento.</p></article><article class="simpleCard"><small>Mentoria</small><h3>MW Mecânica</h3><p><b>Pitanga/PR</b><br>Contrato fechado após indicação de João Souza. Início previsto para os próximos dias.</p></article><article class="simpleCard"><small>Mentoria + BPO</small><h3>Impulso Imóveis</h3><p><b>Brodowski/SP</b><br>Empresa conhecida em evento do G4; contratação registrada em 25/09.</p></article></div></section>
+
+<section class="section" id="perdidas"><div class="sectionHead"><div><div class="eyebrow">Não fechadas</div><h2>Negociações encerradas</h2><p>Oportunidades que deixaram de seguir no comercial.</p></div><div class="count">3 encerradas</div></div><div class="cardGrid"><article class="simpleCard" style="border-top-color:#9aa6ad"><small>Mentoria</small><h3>Hospital Loanda</h3><p><b>Loanda/PR</b><br>Negociação encerrada por ausência de retorno.</p></article><article class="simpleCard" style="border-top-color:#9aa6ad"><small>Outros</small><h3>Voltolini Consultoria</h3><p><b>Blumenau/SC</b><br>Lead originado por anúncio; negociação encerrada por ausência de retorno.</p></article><article class="simpleCard" style="border-top-color:#9aa6ad"><small>Mentoria</small><h3>Fundição Carajás</h3><p><b>Paiçandu/PR</b><br>Lead originado por anúncio; negociação encerrada por ausência de retorno.</p></article></div></section>
+
+<section class="section" id="encerrados"><div class="sectionHead"><div><div class="eyebrow">Clientes que saíram</div><h2>Encerramentos recentes de contratos</h2><p>Separado das negociações perdidas: aqui entram empresas que efetivamente foram clientes e encerraram atendimento.</p></div></div><div class="exitGrid"><article class="exitCard"><h3>JGA Alimentos</h3><p>Contrato anterior encerrado ao final de junho.</p><div class="exitNote">A empresa voltou a conversar com a Lean em setembro e hoje aparece novamente em “Propostas e negociações em aberto”.</div></article><article class="exitCard"><h3>Valcann</h3><p>Contrato encerrado ao final de junho.</p></article></div></section>
+
+<section class="section" id="parcerias"><div class="sectionHead"><div><div class="eyebrow">Parcerias</div><h2>Parcerias e canais em estruturação</h2><p>Todas as frentes de parceria ficam concentradas aqui.</p></div><div class="count">5 frentes</div></div><div class="partners"><div class="partnerRow"><div><h3>ERP MyMilk</h3><small>Tecnologia · Laticínios</small></div><div><b>Oportunidade</b><p>Parceria comercial e indicações no setor.</p></div><div><b>Próximo passo</b><p>Definir formato e acompanhar novas indicações.</p></div></div><div class="partnerRow"><div><h3>Grupo Souza | HUB Laticínios</h3><small>Contabilidade · Laticínios</small></div><div><b>Oportunidade</b><p>HUB de serviços e rede de prospecção para laticínios.</p></div><div><b>Próximo passo</b><p>Definir papéis, regras e estratégia do HUB.</p></div></div><div class="partnerRow"><div><h3>Guilherme Defende</h3><small>Esquadrias</small></div><div><b>Oportunidade</b><p>Produto Lean focado em produção para clientes do parceiro.</p></div><div><b>Próximo passo</b><p>Estruturar a oferta.</p></div></div><div class="partnerRow"><div><h3>Édipo</h3><small>Contabilidade · Saúde</small></div><div><b>Oportunidade</b><p>Possível produto de BPO voltado à área médica.</p></div><div><b>Próximo passo</b><p>Estruturar produto e modelo da parceria.</p></div></div><div class="partnerRow"><div><h3>Cezar Mesquita FX</h3><small>IA · Comercial</small></div><div><b>Oportunidade</b><p>Produtos, ferramentas e treinamentos de IA.</p></div><div><b>Próximo passo</b><p>Formalizar parceria e avaliar canal comercial na ACIM.</p></div></div></div></section>
+
+<section class="section" id="projetos"><div class="sectionHead"><div><div class="eyebrow">Projetos de clientes</div><h2>Ferramentas e aplicações em desenvolvimento</h2><p>Projetos digitais ligados a clientes ou provas de conceito comerciais.</p></div></div><div class="projectGrid">
+<article class="projectCard"><div class="eyebrow">HUB gerencial</div><h3>Master Shopping</h3><p>Unificação de faturamento, crédito, limite extra, faixas, Cliente 360 e análises por lojas, guias e clientes.</p><span class="projectState">Em desenvolvimento</span></article>
+<article class="projectCard"><div class="eyebrow">Automação & análise</div><h3>Arco Ingá</h3><p>Recursos digitais para apoiar análises financeiras, precificação e automação de relatórios.</p><span class="projectState">Em desenvolvimento</span></article>
+<article class="projectCard"><div class="eyebrow">Aplicações de apoio</div><h3>MW Mecânica</h3><p>Ferramentas HTML para apoiar financeiro, produção e gestão.</p><span class="projectState">Em desenvolvimento</span></article>
+<article class="projectCard"><div class="eyebrow">Calculadora online</div><h3>SR Equipamentos</h3><p>Ferramenta de cálculo e apoio à decisão comercial.</p><span class="projectState">Em desenvolvimento</span></article>
+<article class="projectCard"><div class="eyebrow">Prova de conceito</div><h3>JGA Alimentos</h3><p>Portal gerencial em HTML com ABC, recorrência, fluxo de caixa e análises.</p><span class="projectState">Protótipo / negociação</span></article>
+<article class="projectCard"><div class="eyebrow">Prova de conceito</div><h3>Bedin Tintas</h3><p>Demo com foco em comercial, reativação de clientes, estoque, compras e fluxo simples.</p><span class="projectState">Protótipo comercial</span></article>
+</div></section>
+
+<section class="section" id="internas"><div class="sectionHead"><div><div class="eyebrow">Ferramentas Lean</div><h2>Produtos, plataformas e ferramentas internas</h2><p>O que pertence à própria Lean, separado dos projetos de clientes.</p></div></div><div class="internalGrid">
+<article class="internalCard"><div class="eyebrow">Ferramenta interna</div><h3>CRM Lean · V2.2</h3><p>Google Sheets + Apps Script + interface própria para centralizar histórico comercial, estágios e próximos passos.</p><div class="flow"><span>Contato</span><i>→</i><span>Diagnóstico</span><i>→</i><span>Proposta</span><i>→</i><span>Próximo passo</span></div></article>
+<article class="internalCard"><div class="eyebrow">Clientes</div><h3>Ensino Lean</h3><p>Plataforma de capacitação para clientes, com conteúdos de gestão financeira, indicadores, processos, produção e uso das ferramentas dos projetos.</p></article>
+<article class="internalCard"><div class="eyebrow">Equipe</div><h3>Academia interna</h3><p>Trilha própria de onboarding, método, validação de dados, Excel, financeiro, produção, comercial, casos e simulações.</p></article>
+<article class="internalCard"><div class="eyebrow">BPO</div><h3>Nibo + automações + IA</h3><p>Padronização da operação financeira e busca por ganho de capacidade.</p></article>
+<article class="internalCard"><div class="eyebrow">Conhecimento</div><h3>Contexto Mestre</h3><p>Base consolidada para transportar contexto, decisões e padrões entre projetos e ferramentas de IA.</p></article>
+<article class="internalCard"><div class="eyebrow">Organização</div><h3>Notion / Central interna</h3><p>Documentação, organização de processos e centralização de informações da Lean.</p></article>
+</div></section>
+
+<section class="section" id="novidades">
+<div class="sectionHead"><div><div class="eyebrow">Novidades</div><h2>Mudanças importantes e novos padrões</h2><p>Além de comunicar o que mudou, esta área também registra orientações práticas que a equipe deve seguir.</p></div></div>
+<div class="newsList">
+<div class="newsRow"><b>Novo site</b><div><h3>leancompany.com.br está sendo reconstruído</h3><p>Nova estrutura institucional alinhada ao ICP e ao posicionamento atual da Lean.</p></div></div>
+<div class="newsRow"><b>Comercial</b><div><h3>Propostas comerciais em formato HTML</h3><p>Microsites personalizados passam a ser usados como uma nova forma de apresentar diagnóstico, solução e impacto ao cliente.</p></div></div>
+<div class="newsRow"><b>Infraestrutura</b><div><h3>GitHub + Vercel passam a fazer parte do padrão de publicação</h3><p>Versionamento, histórico e deploy automático devem fazer parte das novas ferramentas e páginas desenvolvidas pela equipe.</p></div></div>
+</div>
+<div class="publishGuide">
+<div class="publishGuideTop"><div><div class="eyebrow">Novo padrão da equipe</div><h3>Como publicar uma nova ferramenta de cliente</h3></div><p>Para manter os projetos organizados e facilitar manutenção, histórico e acesso dos clientes, as novas ferramentas devem seguir um padrão único de publicação.</p></div>
+<div class="publishSteps">
+<div class="publishStep"><div class="stepNo">01</div><b>Use a conta institucional</b><p>GitHub e Vercel devem ser acessados pela conta institucional de suporte da Lean, evitando projetos presos a contas pessoais.</p><span class="codeLine">suporte@leancompany.com.br</span></div>
+<div class="publishStep"><div class="stepNo">02</div><b>Publique no repositório app</b><p>Projetos destinados a clientes devem ser concentrados no repositório <strong>app</strong> do GitHub da Lean.</p><span class="codeLine">GitHub → repositório: app</span></div>
+<div class="publishStep"><div class="stepNo">03</div><b>Crie uma pasta para o cliente</b><p>Cada cliente deve ter sua própria pasta. Use um nome curto, em minúsculas e sem espaços ou acentos.</p><span class="codeLine">/master-shopping/ · /mw-mecanica/</span></div>
+<div class="publishStep"><div class="stepNo">04</div><b>Deixe o Vercel publicar</b><p>O repositório está conectado ao Vercel. Ao atualizar a pasta no GitHub, a nova versão deve seguir para publicação automaticamente.</p><span class="codeLine">GitHub → Vercel</span></div>
+<div class="publishStep"><div class="stepNo">05</div><b>Use o endereço padrão</b><p>O nome da pasta vira o caminho final após o domínio do APP.</p><span class="codeLine">app.leancompany.com.br/&lt;cliente&gt;/</span></div>
+<div class="publishStep"><div class="stepNo">06</div><b>Compartilhe com a equipe</b><p>Depois da publicação, envie a ferramenta no grupo da equipe para que todos saibam o que está sendo desenvolvido na Lean.</p><span class="codeLine">Cliente + objetivo + link + principal novidade</span></div>
+</div>
+<div class="publishRules">
+<div class="ruleCard"><b>Ao criar uma nova versão</b><p>Atualize a mesma pasta do cliente e preserve o histórico pelo GitHub. Evite criar repositórios e endereços paralelos sem necessidade.</p></div>
+<div class="ruleCard"><b>Ao compartilhar no grupo</b><p>Informe em uma mensagem curta: qual cliente, o que a ferramenta faz, o que foi criado ou alterado e o link para visualização.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="avisos"><div class="sectionHead"><div><div class="eyebrow">Avisos</div><h2>Lembretes para a equipe</h2></div></div><div class="notice"><ul>
+<li><b>CRM:</b> continua sendo a fonte oficial dos detalhes comerciais; o Informativo concentra a visão geral para a equipe.</li>
+<li><b>Novas ferramentas:</b> sempre que uma ferramenta, dashboard, calculadora ou automação nova for desenvolvida, compartilhe no grupo da equipe para conhecimento de todos.</li>
+<li><b>Publicação:</b> projetos de clientes devem seguir o novo padrão GitHub → repositório <b>app</b> → pasta do cliente → Vercel → <b>app.leancompany.com.br/&lt;cliente&gt;/</b>.</li>
+<li><b>Próximas edições:</b> cases, aprendizados, mudanças de processo e ferramentas relevantes podem ser enviados pelo botão “Enviar atualização”.</li>
+</ul></div></section>
+
+<section class="section" id="mudancas">
+<div class="sectionHead"><div><div class="eyebrow">Desde o último informativo</div><h2>Mudanças desde a edição anterior</h2><p>Um resumo curto do que efetivamente mudou desde o último fechamento do Informativo.</p></div><div class="count">6 mudanças</div></div>
+<div class="changesSince">
+<div class="changeSince"><b>3 novos fechamentos</b><p>Laranjeiras Terraplanagem, MW Mecânica e Impulso Imóveis passaram para a carteira.</p></div>
+<div class="changeSince"><b>Real Lacto voltou para “Pausado”</b><p>O projeto chegou a fechar, mas o início foi postergado; hoje a negociação permanece em acompanhamento.</p></div>
+<div class="changeSince"><b>CRM Lean evoluiu para a V2.2</b><p>A operação comercial ganhou uma ferramenta interna mais estruturada para histórico, estágios e próximos passos.</p></div>
+<div class="changeSince"><b>Ensino Lean avançou</b><p>A plataforma para clientes ganhou mais estrutura, conteúdos e organização das trilhas.</p></div>
+<div class="changeSince"><b>Mais ferramentas digitais em desenvolvimento</b><p>Master Shopping, Arco Ingá, MW Mecânica, SR Equipamentos e novas provas de conceito ampliaram a frente digital.</p></div>
+<div class="changeSince"><b>Novo padrão de publicação</b><p>Projetos de clientes passam a seguir conta institucional → GitHub/app → pasta do cliente → Vercel → app.leancompany.com.br/&lt;cliente&gt;/.</p></div>
+</div>
+</section>
+
+<section class="section" id="proximos"><div class="sectionHead"><div><div class="eyebrow">Próximos movimentos</div><h2>O que merece acompanhamento agora</h2></div><div class="count">5 prioridades</div></div><div class="nextList">
+<article class="nextItem"><b>Danone</b><p>Cobrar retorno da proposta apresentada.</p></article><article class="nextItem"><b>Novos fechamentos</b><p>Organizar início de Laranjeiras, MW e Impulso.</p></article><article class="nextItem"><b>HUB Laticínios</b><p>Definir formato com Grupo Souza.</p></article><article class="nextItem"><b>Ensino Lean</b><p>Evoluir estrutura e conteúdos.</p></article><article class="nextItem"><b>Novo site</b><p>Avançar a nova arquitetura institucional.</p></article>
+</div></section>
+
+</div></main>
+<div id="contrib" class="hidden" style="position:fixed;inset:0;background:#0008;z-index:140;display:grid;place-items:center;padding:20px"><div style="width:min(560px,100%);background:#fff;border-radius:10px;padding:25px"><div style="display:flex;justify-content:space-between;align-items:start"><div><div class="eyebrow">Contribuição</div><h2>Enviar atualização</h2></div><button onclick="closeContribution()" style="border:0;background:#eef2f4;width:34px;height:34px;border-radius:50%;font-size:20px">×</button></div><div style="display:grid;gap:10px;margin-top:18px"><input placeholder="Seu nome" style="padding:10px;border:1px solid #ccd4d8;border-radius:6px"><select style="padding:10px;border:1px solid #ccd4d8;border-radius:6px"><option>Novidade</option><option>Aviso</option><option>Case / Entrega</option><option>Ferramenta</option></select><textarea placeholder="O que aconteceu?" style="padding:10px;border:1px solid #ccd4d8;border-radius:6px;min-height:100px"></textarea><button onclick="closeContribution()" style="justify-self:end;background:var(--blue);color:#fff;border:0;border-radius:6px;padding:10px 15px;font-weight:700">Enviar</button></div></div></div>
+
+<script>
+function unlock(){const p=document.getElementById('password'),e=document.getElementById('err');if(p.value==='lean'){sessionStorage.setItem('informativo-v10','1');document.getElementById('login').classList.add('hidden');document.getElementById('app').classList.remove('hidden');scrollTo(0,0)}else e.textContent='Senha incorreta. Neste protótipo, use: lean'}
+function lock(){sessionStorage.removeItem('informativo-v10');document.getElementById('app').classList.add('hidden');document.getElementById('login').classList.remove('hidden')}
+function pinRail(){const r=document.getElementById('rail'),pinned=r.classList.toggle('pinned');document.body.classList.toggle('railPinned',pinned);document.getElementById('pinText').textContent=pinned?'Desafixar menu':'Fixar menu'}
+function openMobile(){document.getElementById('mobileOverlay').classList.add('show')}
+function closeMobile(){document.getElementById('mobileOverlay').classList.remove('show')}
+function overlayClose(e){if(e.target.id==='mobileOverlay')closeMobile()}
+function openContribution(){document.getElementById('contrib').classList.remove('hidden')}
+function closeContribution(){document.getElementById('contrib').classList.add('hidden')}
+
+let currentGroup='all';
+function setProposalView(view){
+ document.querySelectorAll('.toggleBtn').forEach(b=>b.classList.toggle('active',b.dataset.view===view));
+ document.getElementById('summaryView').classList.toggle('hidden',view!=='summary');
+ document.getElementById('detailView').classList.toggle('hidden',view!=='detail');
+}
+function filterProposals(group){
+ currentGroup=group;
+ document.querySelectorAll('.filterBtn').forEach(b=>b.classList.toggle('active',b.dataset.group===group));
+ document.querySelectorAll('#summaryView tbody tr,#detailView .proposalCard').forEach(el=>{
+   el.classList.toggle('hidden', group!=='all' && el.dataset.group!==group);
+ });
+}
+window.addEventListener('DOMContentLoaded',()=>{
+ if(sessionStorage.getItem('informativo-v10')==='1'){document.getElementById('login').classList.add('hidden');document.getElementById('app').classList.remove('hidden')}
+ document.getElementById('password')?.addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});
+ const links=[...document.querySelectorAll('.navLink')],current=document.getElementById('current');
+ const obs=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));const hit=links.find(a=>a.getAttribute('href')==='#'+entry.target.id);if(hit&&current)current.textContent=hit.dataset.label||''}}),{rootMargin:'-27% 0px -66% 0px'});
+ links.forEach(a=>{const el=document.querySelector(a.getAttribute('href'));if(el)obs.observe(el)});
+ const bar=document.getElementById('bar');addEventListener('scroll',()=>{const d=document.documentElement,m=d.scrollHeight-d.clientHeight;bar.style.width=(m?Math.min(100,d.scrollTop/m*100):0)+'%'},{passive:true});
+});
+</script>
+
+</div></body></html>
